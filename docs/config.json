@@ -1,0 +1,19 @@
+{
+    "title": "Colatris Documentation",
+    "tagline": "Effortless Localization",
+    "author": "Colatris",   
+    "image": "http://colatris.com/img/logo.png",
+    "theme": "daux-blue",
+    "template": "default",
+    "clean_urls": true,
+    "toggle_code": false,
+    "breadcrumbs": true,
+    "breadcrumb_separator": "Chevrons",
+    "date_modified": true,
+    "float": false,
+    "file_editor": false,   
+    "twitter": ["colatris"],
+    "links": {
+        "Colatris": "http://www.colatris.com"
+    }
+}
