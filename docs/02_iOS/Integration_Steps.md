@@ -5,7 +5,7 @@ This tutorial will run you through the Colatris integration process.
 1. Add `pod 'Colatris'` to your Podfile and run `pod install`.
 
 
-2. In your target's Info.plist file, find the following keys and insert the correct values:
+2. In your target's Info.plist file, add the following keys and insert the correct values:
 	* `ColatrisAppId` (String): Your app's PID as found in the Colatris dashboard.
 	* `ColatrisContentVersion` (Number): The content version corresponding to your build.
 
@@ -30,7 +30,7 @@ The `colatris-build` build tool is a Mac OS X executable that comes with the Col
 1. Add `Colatris.framework` to your project.
 
 
-2. In your target's Info.plist file, add the following keys:
+2. In your target's Info.plist file, add the following keys and insert the correct values:
 	* `ColatrisAppId` (String): Your app's PID as found in the Colatris dashboard.
 	* `ColatrisContentVersion` (Number): The content version corresponding to your build.
 
