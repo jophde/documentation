@@ -31,7 +31,7 @@ repositories {
 }
 
 dependencies {
-    compile 'com.colatris:colatris-sdk:0.2.0'
+    compile 'com.colatris:colatris-sdk:0.2.1'
 }
 
 android {
@@ -92,10 +92,6 @@ public class SampleApplication extends Application {
         // project control panel where they can perform actions.  Once authenticated, users can also press and hold individual peices of
         // text.  This will open a dialog that allows them to make edits in-context.  The default is false.
         config.setManualMode(true);  
-
-        // When set, all users, even those without the Colatris app, will receive string updates once published on the Colatris Dashboard.  
-        // If the manual mode is enabled this setting is ignored.  It defaults to Colatris.Config.ProdServing.NONE.
-        config.setProdServing(Colatris.Config.ProdServing.DAILY); 
 
         // Makes the Colatris SDK print logs.  Uses the standard Android logging levels.  Defaults to Colatris.Config.LogLevel.NONE
         config.setLogLevel(Colatris.Config.LogLevel.DEBUG);
