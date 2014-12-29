@@ -43,7 +43,10 @@ The `colatris-build` build tool is a Mac OS X executable that comes with the Col
 The build phase must be placed before "Compile Sources".
 
 
-5. Create an empty file and name it `<base locale>.colatris`, add this file to the project and make sure it is included in the app's bundled resources.
+5. In your target's Build Settings, in "Other Linker Flags", add `-all_load` if it's not already present.
+
+
+6. Create an empty file and name it `<base locale>.colatris`, add this file to the project and make sure it is included in the app's bundled resources.
 
 # Options
 
