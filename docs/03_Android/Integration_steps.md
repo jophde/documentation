@@ -19,7 +19,7 @@ buildscript {
   dependencies {
     // Colatris targets the new 1.0.0 Gradle plugin.  However, it should work fine with 0.14.*. It requires Groovy 2.1 +.
     classpath 'com.android.tools.build:gradle:1.0.0'  
-    classpath 'com.colatris:colatris-plugin:0.2.0'
+    classpath 'com.colatris:colatris-plugin:0.2.2'
   }
 }
 
@@ -31,7 +31,7 @@ repositories {
 }
 
 dependencies {
-    compile 'com.colatris:colatris-sdk:0.2.1'
+    compile 'com.colatris:colatris-sdk:0.2.2'
 }
 
 android {
