@@ -51,9 +51,9 @@ If the new locale has never been selected before on the device, the user should 
 Pushing translations will upload the strings that have been edited on the device to the Colatris backend. 
 
 
-### Pushing main locale strings
+### Creating new content versions
 
-For each new build of the app that contains new texts, an admin must push the main locale strings in order to add these new strings to the Colatris backend. Once they have been added, these new strings can be translated into other languages.
+For each new build of the app that contains new texts, an admin must create a new content version to add these new strings to the Colatris backend. Once they have been added, these new strings can be translated into other languages.
 
 ## Editing strings
 

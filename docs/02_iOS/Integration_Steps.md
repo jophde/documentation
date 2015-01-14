@@ -5,12 +5,7 @@ This tutorial will run you through the Colatris integration process.
 1. Add `pod 'Colatris'` to your Podfile and run `pod install`.
 
 
-2. In your target's Info.plist file, add the following keys and insert the correct values:
-	* `ColatrisAppId` (String): Your app's PID as found in the Colatris dashboard.
-	* `ColatrisContentVersion` (Number): The content version corresponding to your build.
-
-
-3. In your AppDelegate, add `#import <Colatris/Colatris.h>` to your imports, and `[Colatris startInWindow:self.window withOptions:<options>];` right after your window creation code in the `application:didFinishLaunchingWithOptions:` method. See below for options.
+2. In your AppDelegate, add `#import <Colatris/Colatris.h>` to your imports, and `[Colatris startInWindow:self.window withAppId:<appId> andOptions:<options>];` right after your window creation code in the `application:didFinishLaunchingWithOptions:` method. Your app ID can be found in the Colatris dashboard. See below for options.
 
 
 # Manual installation
@@ -30,12 +25,7 @@ The `colatris-build` build tool is a Mac OS X executable that comes with the Col
 1. Add `Colatris.framework` to your project.
 
 
-2. In your target's Info.plist file, add the following keys and insert the correct values:
-	* `ColatrisAppId` (String): Your app's PID as found in the Colatris dashboard.
-	* `ColatrisContentVersion` (Number): The content version corresponding to your build.
-
-
-3. In your AppDelegate, add `#import <Colatris/Colatris.h>` to your imports, and `[Colatris startInWindow:self.window withOptions:<options>];` right after your window creation code in the `application:didFinishLaunchingWithOptions:` method. See below for options.
+2. In your AppDelegate, add `#import <Colatris/Colatris.h>` to your imports, and `[Colatris startInWindow:self.window withAppId:<appId> andOptions:<options>];` right after your window creation code in the `application:didFinishLaunchingWithOptions:` method. Your app ID can be found in the Colatris dashboard. See below for options.
 	
 	
 4. Copy colatris-build into `/usr/local/bin/`, or wherever you like your executables to be, and add a run script build phase to your project, with the following contents:
@@ -50,7 +40,7 @@ The build phase must be placed before "Compile Sources".
 
 # Options
 
-The options parameter of the `startInWindow:withOptions:` method is an NSDictionary. Here are the possible keys:
+The options parameter of the `startInWindow:withAppId:andOptions:` method is an NSDictionary. Here are the possible keys:
 
 * `COOptionsDialogEnabled` (NSNumber Boolean, default: `NO`) Enables the Colatris actions panel, which lets users pull, edit and push strings from within the app.
 
