@@ -38,7 +38,7 @@ The `colatris-build` build tool is a Mac OS X executable that comes with the Col
 	
 	
 4. Copy the colatris binary into `/usr/local/bin/`, or wherever you like your executables to be, and add a run script build phase to your project, with the following contents:
-`/usr/local/bin/colatris extract "${PROJECT_DIR}"`
+`/usr/local/bin/colatris extract -p "${PROJECT_DIR}"`
 The build phase must be placed before "Compile Sources".
 
 
