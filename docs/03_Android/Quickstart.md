@@ -56,19 +56,27 @@
 
 4.  Optional.  If you are using Proguard or Dexguard be sure to add the following to your configuration.
     
+    ```
     -keep public class com.colatris.**
     -keepclassmembers public class com.colatris.* { *; }
+    ```
 
 5.  Push up the Content Version declared in `project.colatris.contentVersion` to the Colatris Dashboard.  If it was already published the task will fail.  Simply increment `project.colatris.contentVersion` to publish a new one.  This should be done when your next app release is ready to translation.
 
+    ```
     gradle pushReleaseContentToColatris
+    ```
 
 6. Send us a build of your app so that translation can happen in-context.  Content Versions can also be published from the Colatris app if step 5 is skipped.
 
+    ```
     gradle sendReleaseBuildToColatris
+    ```
 
 7.  Once your translations are finished they can pulled back into your app's resouces.  Only values directories with locale suffixes will be merged.  Colatris handles updating your existing string xml files and creating a new one if needed per each locale.
 
+    ```
     gradle pullReleaseContentFromColatris
+    ```
 
 Note:  These steps will enable Colatris Manual Mode for all of your app's Build Variants.  To configure Colatris more granuarly please see the full Intengration Steps document.  In a stock Android app only two variants exist, `debug` and `release`.  Source sets that aren't part of a variant are respected.
