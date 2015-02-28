@@ -95,4 +95,4 @@ Pre-requisites: text/resources must be externalized (ie. live in resource files 
     gradle pullMainWorkingContentFromColatris
     ```
 
-Note:  These steps will enable Colatris Manual Mode for all of your app's Build Variants.  To configure Colatris more granuarly please see the full Intengration Steps document.  In a stock Android app only two variants exist, `debug` and `release`. Colatris supports gradle commands .  Source sets that aren't part of a variant are respected.
+Note:  These steps will enable Colatris Editor Mode for all of your app's Build Variants.  To configure Colatris more granuarly please see the full Intengration Steps document.  In a stock Android app only two variants exist, `debug` and `release`. Colatris supports gradle commands .  Source sets that aren't part of a variant are respected.
