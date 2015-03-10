@@ -31,7 +31,7 @@ def stage():
     global URL
     ENVIRONMENT     = 'stage'
     S3_BUCKET_NAME  = 'co-static-stage'
-    URL             = 'https://co-static-stage.s3-website-us-west-1.amazonaws.com'
+    URL             = 'https://s3-us-west-1.amazonaws.com/co-static-stage/'
 
 @task
 def dev():
@@ -40,7 +40,7 @@ def dev():
     global URL
     ENVIRONMENT     = 'dev'
     S3_BUCKET_NAME  = 'co-static-dev'
-    URL             = 'https://co-static-dev.s3-website-us-west-1.amazonaws.com'
+    URL             = 'https://s3-us-west-1.amazonaws.com/co-static-dev/'
 
 @task
 def upload_docs():
