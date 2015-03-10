@@ -8,21 +8,29 @@ If you have installed the Colatris SDK manually, the colatris command line tool 
 
 #### Extract
 
-```bash
-colatris extract -p <project path>
-```
+
+    colatris extract -p <project path>
+
 Extract project strings into a `<locale>.colatris` file.
 
 #### Push Content
 
-```bash
-colatris pushContent -p <project path> -k <API Key> [-d <description>]
-```
-Create a new content version for the project on the Colatris backend with the strings contained in the project's `<locale>.colatris` file. The API Key can be found in the Colatris dashboard in Home > Project Info.
+
+    colatris pushContent -p <project path> -k <project API key> [-d <description>]
+
+Create a new content version for the project on the Colatris backend with the strings contained in the project's `<locale>.colatris` file.
+Admins and project owners can view the project's API key on the Colatris dashboard in _Home > Project info_.
 
 #### Pull Content
 
-```bash
-colatris pullContent -p <project path>
-```
+
+    colatris pullContent -p <project path> -k <project API key>
+
 Pull latest strings for the app’s content version into the project’s `<locale>.colatris` file.
+Admins and project owners can view the project's API key on the Colatris dashboard in _Home > Project info_.
+
+#### Version
+
+	colatris version
+
+Display the version of the CLI tool.

@@ -9,11 +9,24 @@ Please follow the current styleguide and refer to existing pages for inspiration
 The numbers on the elements correspond to their order in the menu.
 Keep the exact format with '_'s.
 
+Add any new files/folders to docs/contents.json
+
 #### Deployment
 
-For now, ask Albert, will write instructions later. 
+Documentation is deployed through our static tier. To upload files to S3 get the following dependencies:
 
-#### API pages
+```bash
+pip install boto
+pip install fabric
+```
 
-This will soon be available via public subdomain.
-Content is generated from .json in respective repos using Scrapi
+Then `cd` to root of this repo and type the following command:
+
+```bash
+fab <ENV> upload_docs
+```
+
+Where `<ENV> = [stage, prod]`
+
+Your files will be available at the url outputed by the script.
+

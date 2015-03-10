@@ -9,7 +9,7 @@ After you log in or sign up, You will be taken to the _Projects_ page. It will b
 
 Once you have created a Project for you app, you can request translations by adding locales to it.
 
-On the top right you can see the _Home_ page. On this page, select the _Project Locales_ tab.
+On the top right you can see the _Home_ page. On this page, selet the _Project Locales_ tab.
 Here you can choose from a wide selection of different locales.
 
 __Note:__ German, for example, will be localized differently for Germany and Switzerland.

@@ -18,7 +18,7 @@ String IDs (SID) are only allowed to contain the following characters: alphanume
 
 Sample formatting:
 
-![alt text](/akkadia/img/ios_sample.png ".strings example")
+![alt text](/images/docs/ios_sample.png ".strings example")
 
 ### _*.xml_ for Android
 
@@ -27,5 +27,4 @@ String IDs (SID) are only allowed to contain the following characters: alphanume
 
 For strings, your uploads need to match this sample document structure:
 
-![alt text](/akkadia/img/xml_sample.png ".xml example")
-
+![alt text](/images/docs/xml_sample.png ".xml example")

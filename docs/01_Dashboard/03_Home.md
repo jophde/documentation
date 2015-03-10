@@ -1,6 +1,6 @@
 ## The _App info_ tab
 
-This tab displays basic information about your project. Admins can edit this information.
+This tab dislays basic information about your project. Admins can edit this information.
 Admins can also view the project's API key in this tab.
 
 ## The _Project Locales_ tab

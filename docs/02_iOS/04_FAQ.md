@@ -1,4 +1,4 @@
-#### What operations are performed by the Colatris SDK when the app starts?
+### What operations are performed by the Colatris SDK when the app starts?
 
 
 For end users, when the option `COOptionsDialogEnabled` isn't set, the following operations are performed by Colatris at launch time:
@@ -15,7 +15,27 @@ This first network request is attempted synchronously the first time the app is 
 
 
 
-#### I'm noticing some discrepancies when using `hasPrefix:`, `hasSuffix:` or `length` on localized strings
+### A network request on the main thread? Isn't that a crime?
+
+It is true that you should never make a synchronous network request on the UI thread. That would make the UI freeze and you’d get a terrible user experience. This is __not__ what the Colatris SDK does. 
+
+
+With Colatris, you’re packaging strings for one single language in your shipping app. For other languages, strings files have to be downloaded at runtime. So the first time the app is launched, Colatris detects the user’s language, and downloads the corresponding strings file to the device. It is primordial that this operation happens __before any UI is displayed__, otherwise what language would that UI be displayed in? 
+
+
+That’s why this first network request is made synchronously. And because it is called from the `application: didFinishLaunchingWithOptions:` method, it occurs while your app’s loading screen is still displayed, and before any UI is displayed. This results in a slightly longer load time the first time your app is launched. That’s a way more desirable user experience than displaying the app in the wrong language the first time, and switching to the right one after that, which would be confusing at best. 
+
+
+This network request has a very short timeout delay (3 seconds). This means that if the right language file can’t be downloaded fast enough, the app will load using packaged strings in your development language. The request is then attempted again asynchronously with a longer timeout delay. So in that case, the app will be displayed in the wrong language the first time. But since strings files are so small and are hosted on a first rate Content Delivery Network, this should not happen very often, only when users have very bad or no internet access.  
+
+
+Note that the timeout delay for this synchronous network request is configurable. If you don’t think 3 seconds is the right value, you can set a `syncTimeout` option in the Options dict of Colatris' `startInWindow: withAPIKey: andOptions:` method, with an `NSNumber` value in seconds. However, we do not recommend you set a long timeout delay, because iOS will make your app terminate should it take too long to start. 
+
+
+If you’ve read this far and still aren’t convinced that Colatris should make this synchronous network call on the app’s first launch, then we would love to hear your thoughts and suggestions. Don’t hesitate to share them with us at [info@colatris.com](mailto:info@colatris.com).
+
+
+### I'm noticing some discrepancies when using `hasPrefix:`, `hasSuffix:` or `length` on localized strings
 
 When the option `COOptionsDialogEnabled` is set, the Colatris SDK adds some invisible characters to localized strings. This is so editable strings can be recognized in the UI when the edition dialog is being invoked. These characters won't be visible in the UI but will still be picked up by string matching, comparison and length methods. This may cause some unit tests to fail if they rely on these methods. 
 
@@ -23,3 +43,5 @@ We do not recommend relying on localized string comparison or matching in your u
 
 * Run tests with the option `COOptionsDialogEnabled` disabled.
 * Use the provided `stringByRemovingColatrisCues` method contained in the `NSString+Colatris.h` category. This method returns the localized string without invisible characters.
+
+
