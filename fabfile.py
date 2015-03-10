@@ -34,6 +34,15 @@ def stage():
     URL             = 'https://co-static-stage.s3-website-us-west-1.amazonaws.com'
 
 @task
+def dev():
+    global ENVIRONMENT
+    global S3_BUCKET_NAME
+    global URL
+    ENVIRONMENT     = 'dev'
+    S3_BUCKET_NAME  = 'co-static-dev'
+    URL             = 'https://co-static-dev.s3-website-us-west-1.amazonaws.com'
+
+@task
 def upload_docs():
     conn = boto.connect_s3(AWS_ACCESS_KEY_ID, AWS_ACCESS_KEY_SECRET)
     bucket = conn.get_bucket(S3_BUCKET_NAME)
