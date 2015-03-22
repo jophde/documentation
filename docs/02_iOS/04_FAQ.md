@@ -20,7 +20,7 @@ This first network request is attempted synchronously the first time the app is 
 It is true that you should never make a synchronous network request on the UI thread. That would make the UI freeze and you’d get a terrible user experience. This is __not__ what the Colatris SDK does. 
 
 
-With Colatris, you’re packaging strings for one single language in your shipping app. For other languages, strings files have to be downloaded at runtime. So the first time the app is launched, Colatris detects the user’s language, and downloads the corresponding strings file to the device. It is primordial that this operation happens __before any UI is displayed__, otherwise what language would that UI be displayed in? 
+With Colatris, you’re packaging strings some languages in your shipping app, but your app may support more languages than these. You can add more languages from the Colatris dashboard. For these other languages, strings files have to be downloaded at runtime. So the first time the app is launched, Colatris detects the user’s language, and downloads the corresponding strings file to the device. It is primordial that this operation happens __before any UI is displayed__, otherwise what language would that UI be displayed in? 
 
 
 That’s why this first network request is made synchronously. And because it is called from the `application: didFinishLaunchingWithOptions:` method, it occurs while your app’s loading screen is still displayed, and before any UI is displayed. This results in a slightly longer load time the first time your app is launched. That’s a way more desirable user experience than displaying the app in the wrong language the first time, and switching to the right one after that, which would be confusing at best. 
@@ -32,7 +32,7 @@ This network request has a very short timeout delay (3 seconds). This means that
 Note that the timeout delay for this synchronous network request is configurable. If you don’t think 3 seconds is the right value, you can set a `syncTimeout` option in the Options dict of Colatris' `startInWindow: withAPIKey: andOptions:` method, with an `NSNumber` value in seconds. However, we do not recommend you set a long timeout delay, because iOS will make your app terminate should it take too long to start. 
 
 
-If you’ve read this far and still aren’t convinced that Colatris should make this synchronous network call on the app’s first launch, then we would love to hear your thoughts and suggestions. Don’t hesitate to share them with us at [info@colatris.com](mailto:info@colatris.com).
+To avoid this synchronous network request altogether, you can package strings for all your locales in your shipping app. This can be done using the pullContent command of the command line tool.
 
 
 ### I'm noticing some discrepancies when using `hasPrefix:`, `hasSuffix:` or `length` on localized strings
