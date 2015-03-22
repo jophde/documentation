@@ -26,7 +26,7 @@ Admins and project owners can view the project's API key on the Colatris dashboa
 
     colatris pullContent -p <project path> -k <project API key> [-l <locale>]
 
-Pull latest strings for the app’s content version into the project’s <locale>.colatris file. Pull base locale if no locale is specified.
+Pull latest strings for the app’s content version into the project’s `<locale>.colatris` file. Pull base locale if no locale is specified.
 Admins and project owners can view the project's API key on the Colatris dashboard in _Home > Project info_.
 
 #### Version
