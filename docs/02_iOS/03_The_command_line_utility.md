@@ -11,14 +11,14 @@ If you have installed the Colatris SDK manually, the colatris command line tool 
 
     colatris extract -p <project path>
 
-Extract project strings into a `<locale>.colatris` file.
+Extract project strings into a `<locale>.base.colatris` file.
 
 #### Push Content
 
 
     colatris pushContent -p <project path> -k <project API key> [-d <description>]
 
-Create a new content version for the project on the Colatris backend with the strings contained in the project's `<locale>.colatris` file.
+Create a new content version for the project on the Colatris backend with the strings contained in the project's `<locale>.base.colatris` file.
 Admins and project owners can view the project's API key on the Colatris dashboard in _Home > Project info_.
 
 #### Pull Content
