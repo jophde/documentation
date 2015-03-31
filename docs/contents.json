@@ -1,5 +1,5 @@
 [
-	{"parent":"01_Dashboard", "children": ["01_Registration", "02_Project_creation", "03_Home", "04_Translate", "05_Uploading_files", "06_Manage", "07_FAQ"]},
+	{"parent":"01_Dashboard", "children": ["01_Home", "Uploading_translations", "03_FAQ"]},
 	{"parent":"02_iOS", "children": ["01_Integration_steps", "02_Usage", "03_The_command_line_utility", "04_FAQ"]},
 	{"parent":"03_Android", "children": ["01_Integration_steps", "02_Quickstart"]},
 	{"parent":"04_For_translators", "children": ["01_Onboarding"]},
