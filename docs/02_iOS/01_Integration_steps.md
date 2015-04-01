@@ -26,7 +26,7 @@ The framework is designed to require minimal changes to your app's code, and yet
 
 Admins and project owners can view the project's API key on the Colatris dashboard in _Home > Project info_.
 
-* After you build your app, the `<base locale>.colatris` file that was automatically created in your project should contain strings extracted from your project. You can now create a content version on Colatris with these strings. To do so, run the following command from your project root directory, using the project API key displayed on the Colatris dashboard in _Home > Project info_:
+* After you build your app, the `<base locale>.base.colatris` file that was automatically created in your project should contain strings extracted from your project. You can now create a content version on Colatris with these strings. To do so, run the following command from your project root directory, using the project API key displayed on the Colatris dashboard in _Home > Project info_:
 
 ```bash
 Pods/Colatris/colatris pushContent -p <project path> -k <project API key> [-d <description>]
@@ -80,9 +80,9 @@ The build phase must be placed before "Compile Sources".
 * In your target's Build Settings, in "Other Linker Flags", add `-all_load` if it's not already present.
 
 
-* Create an empty file and name it `<base locale>.colatris`, add this file to the project and make sure it is included in the app's bundled resources.
+* Create an empty file and name it `<base locale>.base.colatris`, add this file to the project and make sure it is included in the app's bundled resources.
 
-* After you build your app, your `<base locale>.colatris` should contain strings extracted from your project. You can now create a content version on Colatris with these strings. To do so, run the following command, using the project API key displayed on the Colatris dashboard in _Home > Project info_:
+* After you build your app, your `<base locale>.base.colatris` should contain strings extracted from your project. You can now create a content version on Colatris with these strings. To do so, run the following command, using the project API key displayed on the Colatris dashboard in _Home > Project info_:
 
 ```bash
 /usr/local/bin/colatris pushContent -p <project path> -k <project API key> [-d <description>]
@@ -125,7 +125,7 @@ For your App Store builds, you can then use the following options:
 
 ### Provide better context
 
-Once you've gone through the integration process and built your app for the first time, you'll notice that the `<locale>.colatris` file that is now part of your project resources has been populated with all of your app's strings. Some of these strings may contain format specifiers (such as `%@` or `%.2f`), and you can see that these specifiers are followed by a tag in the `.colatris` file. By default, this tag will be `{{value}}`. You can change it to whatever makes more sense in the context of each particular string to make it easier for translators to understand what this placeholder stands for. Here are some examples:
+Once you've gone through the integration process and built your app for the first time, you'll notice that the `<locale>.base.colatris` file that is now part of your project resources has been populated with all of your app's strings. Some of these strings may contain format specifiers (such as `%@` or `%.2f`), and you can see that these specifiers are followed by a tag in the `.base.colatris` file. By default, this tag will be `{{value}}`. You can change it to whatever makes more sense in the context of each particular string to make it easier for translators to understand what this placeholder stands for. Here are some examples:
     
 * `"Today is %@{{date}}"`
 
