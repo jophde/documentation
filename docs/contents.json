@@ -1,6 +1,6 @@
 [
 	{"parent":"01_Dashboard", "children": ["01_Home", "02_Uploading_translations", "03_FAQ"]},
-	{"parent":"02_iOS", "children": ["01_Integration_steps", "02_Usage", "03_The_command_line_utility", "04_FAQ"]},
+	{"parent":"02_iOS", "children": ["01_Quickstart", "02_Integration_steps", "03_Usage", "04_The_command_line_utility", "05_FAQ"]},
 	{"parent":"03_Android", "children": ["01_Integration_steps", "02_Quickstart"]},
 	{"parent":"04_For_translators", "children": ["01_Onboarding"]},
 	{"parent":"05_Legal", "children": ["01_Terms_of_Service"]}
