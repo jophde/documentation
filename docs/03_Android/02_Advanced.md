@@ -44,7 +44,7 @@ gradle sendDebugBuildToColatris
 gradle sendReleaseBuildToColatris
 ```
 
-These are the tasks that will be added to a default Android project.  When using debug tasks the release `sourceSet` will be ignored if it exists and vice versa. Main only take resources from the main soruceset.  When pulling, you can choose from the published and working string environments.  Published strings are served via CDN to users when Production Serving mode is enabled.  Working strings are the current strings on the dashboard regardless of status.
+These are the tasks that will be added to a default Android project.  When using debug tasks the release `sourceSet` will be ignored if it exists and vice versa. Main only take resources from the main sourceSet.  When pulling, you can choose from the published and working string environments.  Published strings are served via CDN to users when Production Serving mode is enabled.  Working strings are the current strings on the dashboard regardless of status.
 
 ## Installation
 
@@ -110,12 +110,11 @@ colatris {
 }
 ```
 
-If your app had prod and beta productFlavors you could configure buildVariants such as prodRelease or betaDebug.  Likewise, if your app had an additional avd buildType and no additional sourceSets you could configure the avd buildVariant.  By default a project does not have productFlavors. Colatris also handles flavor dimensions in a similar way.  If you have an abi flavor with the dimenions x86 and arm you could configure the variants releaseAbiX86Release.  The tasks Colatris adds will also follow a similar pattern.  Colatris attempts to adhere to the standards set forth by the [Android Gradle Plugin](http://tools.android.com/tech-docs/new-build-system/user-guide) as much as possible.
-
+If your app had prod and beta productFlavors you could configure buildVariants such as prodRelease or betaDebug.  Likewise, if your app had an additional avd buildType and no additional sourceSets you could configure the avd buildVariant.  By default a project does not have productFlavors. Colatris also handles flavor dimensions in a similar way.  If you have an abi flavor with the dimensions x86 and arm you could configure the variants releaseAbiX86Release.  The tasks Colatris adds will also follow a similar pattern.  Colatris attempts to adhere to the standards set forth by the [Android Gradle Plugin](http://tools.android.com/tech-docs/new-build-system/user-guide) as much as possible.
 
 #### Custom Attributes
 
-Colatris is capable of handling text set on custom attributes of custom views.  However, It does require a little bit more implmentation.
+Colatris is capable of handling text set on custom attributes of custom views.  However, It does require a little bit more implementation.
 Simply implement the `CsCustomView` interface and provide Colatris with the `R.attr` values of your custom view. Colatris will then be able
 to work with the custom view just like stock views.
 

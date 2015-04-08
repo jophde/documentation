@@ -72,7 +72,7 @@ gradle pushMainContentToColatris
 
 ##### Send us a build of your app so that translation can happen in-context.  
 
-**Optional.** Each type of build can be sent sperately.
+**Optional.** Each type of build can be sent separately.
 
 ```
 gradle sendReleaseBuildToColatris
@@ -81,7 +81,7 @@ gradle sendReleaseBuildToColatris
 ####  Now you can go ahead and order translations from the Dashboard! 
 
 
-Sign in. Navigate to your project. And click "Translate Now". Once your translations are finished they can pulled back into your app's resouces.  Only directories with locale suffixes will be merged.  Colatris handles updating your existing string xml files and creating a new one if needed per each locale.
+Sign in. Navigate to your project. And click "Translate Now". Once your translations are finished they can be pulled back into your app's resources.  Only directories with locale suffixes will be merged.  Colatris handles updating your existing string xml files and creating a new one if needed per each locale.
 
 ```
 gradle pullMainWorkingContentFromColatris

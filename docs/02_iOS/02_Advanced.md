@@ -37,7 +37,7 @@ Pods/Colatris/colatris pushContent -p <project path> -k <project API key> [-d <d
 You will need:
 
 1. Colatris.framework
-2. the colatris binary
+2. The Colatris binary
 
 
 Download a .zip of both [here](https://github.com/colatris/colatris-ios-sdk/archive/master.zip).

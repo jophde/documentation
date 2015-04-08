@@ -1,3 +1,4 @@
+# Colatris-enabled in no time.
 
 * Add `pod 'Colatris'` to your Podfile and run `pod install`.
 

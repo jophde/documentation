@@ -1,4 +1,4 @@
-## The _Tanslate Now_ button
+## The _Translate Now_ button
 
 Our favorite feature - with a few click you can request translations for you mobile app.
 
@@ -15,7 +15,7 @@ You can see how your translators are working, how the review process is going an
 
 ## The _Project info_ tab
 
-This tab dislays basic information about your project. Admins can edit this information.
+This tab displays basic information about your project. Admins can edit this information.
 Admins can also view the project's API key in this tab.
 
 ## The _Project Locales_ tab

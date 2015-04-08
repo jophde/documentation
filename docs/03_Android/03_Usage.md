@@ -6,7 +6,7 @@ If `colatris.manualMode` in your app's `build.gradle` is set to `true` all users
 
 If the Colatris app is installed then 3 finger pressing anywhere in your app will open the Colatris App to your app's Colatris action panel.  
 
-The available acitons are:
+The available actions are:
 
 * Edit project information
 * Select locale

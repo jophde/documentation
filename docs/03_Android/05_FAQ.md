@@ -4,7 +4,7 @@ Colatris has two modes.  Production Serving and Editor Mode.  Both of these mode
 
 If Production Serving mode is on, all users of your app will have their strings synced in the background. The sync interval is configurable.  Once it happens, Colatris' internal storage will be updated.  The next time the user launches the app they will see the updated text with your translations.  
 
-If Editor Mode is on Colatris will add a secret gesture to your app.  Any user will be able to 3 finger press and hold in your app.  If the Colatris app isn't installled they will be taken to the Play Store to download it.  If they make a Colatris account and you add them to your app's project they can get the Colatris app, log in, and start making translations.  Colatris will do nothing but add the gesture if there isn't a user logged into the Colatris app with permissions for your project.  
+If Editor Mode is on Colatris will add a secret gesture to your app.  Any user will be able to 3 finger press and hold in your app.  If the Colatris app isn't installed they will be taken to the Play Store to download it.  If they make a Colatris account and you add them to your app's project they can get the Colatris app, log in, and start making translations.  Colatris will do nothing but add the gesture if there isn't a user logged into the Colatris app with permissions for your project.  
 
 ###  How fast is the Colatris string lookup?  
 
