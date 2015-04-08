@@ -62,7 +62,7 @@ buildscript {
     // INCLUDE THE COLATRIS PLUGIN DEPENDENCY
     dependencies {
         classpath 'com.android.tools.build:gradle:1.0.0' // MINIMUM
-        classpath 'com.colatris:colatris-plugin:0.9.2' // HERE
+        classpath 'com.colatris:colatris-plugin:0.9.3' // HERE
     }
 }
 
@@ -73,7 +73,7 @@ repositories {
 
 // INCLUDE THE COLATRIS SDK DEPENDENCY
 dependencies {
-    compile 'com.colatris:colatris-sdk:0.9.2' // HERE
+    compile 'com.colatris:colatris-sdk:0.9.3' // HERE
 }
 
 // APPLY THE COLATRIS PLUGIN (note: Order matters. Put Colatris after the Android plugin.)
@@ -112,36 +112,6 @@ colatris {
 
 If your app had prod and beta productFlavors you could configure buildVariants such as prodRelease or betaDebug.  Likewise, if your app had an additional avd buildType and no additional sourceSets you could configure the avd buildVariant.  By default a project does not have productFlavors. Colatris also handles flavor dimensions in a similar way.  If you have an abi flavor with the dimensions x86 and arm you could configure the variants releaseAbiX86Release.  The tasks Colatris adds will also follow a similar pattern.  Colatris attempts to adhere to the standards set forth by the [Android Gradle Plugin](http://tools.android.com/tech-docs/new-build-system/user-guide) as much as possible.
 
-#### Manifest
-
-Colatris uses the Android Gradle Plugin's Manifest Placeholder functionality to provide your Colatris Configuration as Meta Data.  This allows the Colatris app to do things such as recreate activities after pulling the latest text.  It also ensures that the Colatris app can communicate in private with your app instead of sending broadcasts to all of the Colatris enabled apps that may be on a user's phone.
-
-Even if your project applies colatris to multiple variants such as alphaRelease, betaRelease, paidDebug, freeDebug, etc, these declarations only need to be in the main sourceSet's Manifest.  The Android Gradle Plugin Manifest Merger will take care of adding the Meta Data to each individual variants when you build.
-
-```xml
-<manifest>
-  <application>
-    <meta-data android:name="colatrisConfig" android:value="${colatrisConfig}" />
-  </application>
-</manifest>
-```
-
-#### Activity
-
-Colatris can be enabled by overriding `Activity#attachBaseContext(Context)`.  This will work on individual activities or on a base activity. If an Activity does not have `attachBaseContext` overridden it will use the regular Android resource system and not the Colatris resource system.  This addition is required for both `editorMode` and `prodServing`.
-
-```java
-public class MyActivity extends Activity {
-
-    @Override
-    protected void attachBaseContext(Context newBase) {
-        super.attachBaseContext(Colatris.proxy(newBase, this));
-    }
-}
-```
-
-The technique can also be used on `Service` classes that display text on notifications.
-
 #### Custom Attributes
 
 Colatris is capable of handling text set on custom attributes of custom views.  However, It does require a little bit more implementation.
@@ -171,7 +141,6 @@ public class SampleCustomView extends TextView implements CsCustomView {
 
 }
 ```
-
 
 #### Proguard
 

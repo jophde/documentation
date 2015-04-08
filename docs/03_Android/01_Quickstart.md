@@ -2,45 +2,36 @@
 
 **Pre-requisites:** text/resources must be externalized (ie. live in resource files and not hardcoded into UI elements) **and** you must be on the Gradle build system (the standard for Android Studio).  Colatris supports the Android Gradle Plugin 1.0.+.
 
-#### Add the Colatris Maven repo to the buildscript configuration.
+#### Add the Colatris Maven Repository and a Colatris Plugin dependency to your buildscript configuration
 
 ```
 buildscript {
     repositories {
         maven { url 'http://repos.colatris.com/releases' }
     }
-}
-```
-
-#### Declare a buildscript dependency on the Colatris Gradle plugin.
-
-```
-buildscript {
+    
     dependencies {
-        classpath 'com.colatris:colatris-plugin:0.9.2'
+        classpath 'com.colatris:colatris-plugin:0.9.3'
     }    
 }
 ```
 
-#### Add the Colatris Maven repo to the top-level project configuration.
+#### Add the Colatris Maven Repository and a Colatris SDK dependency to your project configuruation
 
 ```
 repositories {
     maven { url 'http://repos.colatris.com/releases' }
 }
-```
 
-####  Decalare a project dependency on the Colatris SDK.
-
-```
 dependencies {
-    compile 'com.colatris:colatris-sdk:0.9.2' 
+    compile 'com.colatris:colatris-sdk:0.9.3' 
 }
 ```
 
-#### Apply the Colatris Plugin.  It must be applied after the android plugin.
+#### Apply the Colatris Plugin *after* the Android Gradle Plugin
 
 ```
+apply plugin: 'com.android.application'
 apply plugin: 'com.colatris.plugin'
 ```
 
@@ -69,40 +60,8 @@ colatris {
 }
 ```
 
-####  Add a `meta-data` element to the `application` element in your main `AndroidManifest.xml`.
-
-This is how the Colatris Plugin passes configuration to the Colatris SDK.
-
-```
-<manifest>
-  <application>
-    <meta-data android:name="colatrisConfig" android:value="${colatrisConfig}" />
-  </application>
-</manifest>
-```
-
-#### Override `Activity#attachBaseContext(Context)` in your base `Activity` 
-
-Or in each `Activity` that you want to enable Colatris for.
-
-```
-public class MyActivity extends Activity {
-
-    @Override
-    protected void attachBaseContext(Context newBase) {
-        super.attachBaseContext(Colatris.proxy(newBase, this));
-    }
-}
-```
-
 # DONE!
 
-####  If you are using Proguard or Dexguard be **sure** to add the following to your configuration.
-    
-```
--keep public class com.colatris.**
--keepclassmembers public class com.colatris.* { *; }
-```
 ####  Push up a new Content Version.  
 
 If it was already published the task will fail.  Simply increment `project.colatris.contentVersion` to publish a new one. You can also create a new Content version from the Dashboard or from within the Colatris in-app editor.
@@ -128,4 +87,9 @@ Sign in. Navigate to your project. And click "Translate Now". Once your translat
 gradle pullMainWorkingContentFromColatris
 ```
 
-__Note:__  These steps will enable Colatris Editor Mode for all of your app's Build Variants.  To configure Colatris with more granularity, please see the full Integration Steps documentation.
+#####  If you are using Proguard or Dexguard be **sure** to add the following to your configuration.
+    
+```
+-keep public class com.colatris.**
+-keepclassmembers public class com.colatris.* { *; }
+```
