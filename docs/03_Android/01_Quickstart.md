@@ -16,7 +16,7 @@ buildscript {
 }
 ```
 
-#### Add the Colatris Maven Repository and a Colatris SDK dependency to your project configuruation
+#### Add the Colatris Maven Repository and a Colatris SDK dependency to your project configuration.
 
 ```
 repositories {
