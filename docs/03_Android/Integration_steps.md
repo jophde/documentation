@@ -43,7 +43,7 @@ Colatris components are distributed via a private Maven repository.  Both the Pl
     ```groovy
     buildscript {
         repositories {
-            maven { url 'http://repos.colatris.com/releases' } // Unfortunately, the repo must be specified separetely in the buildscript closure
+            maven { url 'http://repos.colatris.com/releases' } // Unfortunately, the repo must be specified separately in the buildscript closure
         }
 
         dependencies {
@@ -99,7 +99,7 @@ Colatris components are distributed via a private Maven repository.  Both the Pl
     }
     ```
 
-If your app had prod and beta productFlavors you could configure buildVariants such as prodRelease or betaDebug.  Likewise, if your app had an additional avd buildType and no additional sourceSets you could configure the avd buildVariant.  By default a project does not have productFlavors. Colatris also handles flavor dimensions in a similar way.  If you have an abi flavor with the dimenions x86 and arm you could configure the variants releaseAbiX86Release.  The tasks Colatris adds will also follow a similar pattern.  Colatris attempts to adhere to the standards set forth by the [Android Gradle Plugin](http://tools.android.com/tech-docs/new-build-system/user-guide) as much as possible.
+If your app had prod and beta productFlavors you could configure buildVariants such as prodRelease or betaDebug.  Likewise, if your app had an additional avd buildType and no additional sourceSets you could configure the avd buildVariant.  By default a project does not have productFlavors. Colatris also handles flavor dimensions in a similar way.  If you have an abi flavor with the dimensions x86 and arm you could configure the variants releaseAbiX86Release.  The tasks Colatris adds will also follow a similar pattern.  Colatris attempts to adhere to the standards set forth by the [Android Gradle Plugin](http://tools.android.com/tech-docs/new-build-system/user-guide) as much as possible.
 
 #### Manifest
 
@@ -117,7 +117,7 @@ Even if your project applies colatris to multiple variants such as alphaRelease,
 
 #### Activity
 
-Colatris can be enabled by overriding `Activity#attachBaseContext(Context)`.  This will work on individual activites or on a base activity. If an Activity does not have `attachBaseContext` overridden it will use the regular Android resource system and not the Colatris resource system.  This addition is required for both `manualMode` and `prodServing` mode.
+Colatris can be enabled by overriding `Activity#attachBaseContext(Context)`.  This will work on individual activities or on a base activity. If an Activity does not have `attachBaseContext` overridden it will use the regular Android resource system and not the Colatris resource system.  This addition is required for both `manualMode` and `prodServing` mode.
 
     ```java
     public class MyActivity extends Activity {
