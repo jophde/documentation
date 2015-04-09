@@ -29,7 +29,7 @@ Admins and project owners can view the project's API key on the Colatris dashboa
 * After you build your app, the `<base locale>.base.colatris` file that was automatically created in your project should contain strings extracted from your project. You can now create a content version on Colatris with these strings. To do so, run the following command from your project root directory, using the project API key displayed on the Colatris dashboard in _Home > Project info_:
 
 ```bash
-Pods/Colatris/colatris pushContent -p <project path> -k %%apik%% [-d <description>]
+Pods/Colatris/colatris pushContent -p . -k %%apik%% [-d <description>]
 ```
 
 ### Manual installation
