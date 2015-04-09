@@ -54,7 +54,7 @@ colatris {
     projectId = %%pid%%
     contentVersion = %%pbuild%%
     description = "New content version"
-    apiKey = "<project API key>"
+    apiKey = "%%apik%%"
     editorMode = true
     prodServing = "daily"
 }
@@ -93,3 +93,6 @@ gradle pullMainWorkingContentFromColatris
 -keep public class com.colatris.**
 -keepclassmembers public class com.colatris.* { *; }
 ```
+
+
+Have a complicated build or custom views?  Check out the [Advanced docs]('/#/colatris/docs/03_Android/02_Advanced').

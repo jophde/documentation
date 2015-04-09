@@ -47,13 +47,11 @@ If the new locale has never been selected before on the device, the user must pu
 Pushing translations will upload the strings that have been edited on the device to the Colatris backend. 
 
 
-<<<<<<< HEAD:docs/02_iOS/Using_Colatris.md
 ### Creating new content versions
 
 For each new build of the app that contains new texts, an admin must create a new content version to add these new strings to the Colatris backend. Once they have been added, these new strings can be translated into other languages.
 
-=======
->>>>>>> 3bdfcddee88d53cec48c318f1aa64d78381b936a:docs/02_iOS/03_Usage.md
+
 ## Editing strings
 
 Whenever a user is logged in to Colatris within the app, UI strings can be edited in context. A long press on the string brings up the edition popup. A long press on any view will bring up the edition popup for all the strings contained in subviews of this view.
