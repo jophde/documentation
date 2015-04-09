@@ -19,7 +19,7 @@ The framework is designed to require minimal changes to your app's code, and yet
 {   
     // your window creation code if you're not using a Storyboard
     // ...
-    [Colatris startInWindow:self.window withAPIKey:<api key> andOptions:<options>];
+    [Colatris startInWindow:self.window withAPIKey:@"%%apik%%" andOptions:<options>];
     //  ...
 }
 ```
@@ -29,7 +29,7 @@ Admins and project owners can view the project's API key on the Colatris dashboa
 * After you build your app, the `<base locale>.base.colatris` file that was automatically created in your project should contain strings extracted from your project. You can now create a content version on Colatris with these strings. To do so, run the following command from your project root directory, using the project API key displayed on the Colatris dashboard in _Home > Project info_:
 
 ```bash
-Pods/Colatris/colatris pushContent -p <project path> -k <project API key> [-d <description>]
+Pods/Colatris/colatris pushContent -p <project path> -k %%apik%% [-d <description>]
 ```
 
 ### Manual installation
@@ -61,7 +61,7 @@ The `colatris` build tool is a Mac OS X executable that comes with the Colatris 
 {   
     // your window creation code if you're not using a Storyboard
     // ...
-    [Colatris startInWindow:self.window withAPIKey:<api key> andOptions:<options>];
+    [Colatris startInWindow:self.window withAPIKey:@"%%apik%%" andOptions:<options>];
     //  ...
 }
 ```
@@ -85,7 +85,7 @@ The build phase must be placed before "Compile Sources".
 * After you build your app, your `<base locale>.base.colatris` should contain strings extracted from your project. You can now create a content version on Colatris with these strings. To do so, run the following command, using the project API key displayed on the Colatris dashboard in _Home > Project info_:
 
 ```bash
-/usr/local/bin/colatris pushContent -p <project path> -k <project API key> [-d <description>]
+/usr/local/bin/colatris pushContent -p <project path> -k %%apik%% [-d <description>]
 ```
 
 ## Options

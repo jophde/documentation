@@ -15,7 +15,7 @@
 {   
     // your window creation code if you're not using a Storyboard
     // ...
-    [Colatris startInWindow:self.window withAPIKey:%%apik%% andOptions:@{COOptionsDialogEnabled: @YES, COOptionsLoggingLevel: @(COLoggingLevelDebug)}];
+    [Colatris startInWindow:self.window withAPIKey:@"%%apik%%" andOptions:@{COOptionsDialogEnabled: @YES, COOptionsLoggingLevel: @(COLoggingLevelDebug)}];
     //  ...
 }
 ```

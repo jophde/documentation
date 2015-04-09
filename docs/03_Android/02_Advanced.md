@@ -92,7 +92,7 @@ colatris {
     projectId = %%pid%%
     contentVersion = %%pbuild%%
     description = "New content version" // HERE
-    apiKey = "<project API key>" // HERE
+    apiKey = "%%apik%%"
     editorMode = false // HERE
     prodServing = "none" // HERE
 
