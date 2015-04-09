@@ -95,4 +95,4 @@ gradle pullMainWorkingContentFromColatris
 ```
 
 
-Have a complicated build or custom views?  Check out the [Advanced docs]('/#/colatris/docs/03_Android/02_Advanced').
+Have a complicated build or custom views?  Check out the [Advanced docs](/#/colatris/docs/03_Android/02_Advanced).

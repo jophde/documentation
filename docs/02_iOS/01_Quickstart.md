@@ -26,4 +26,4 @@
 Pods/Colatris/colatris pushContent -p . -k %%apik%% [-d <description>]
 ```
 
-Not using CocoaPods? Check out the [manual integration steps]('/#/colatris/docs/02_iOS/02_Advanced')
+Not using CocoaPods? Check out the [manual integration steps](/#/colatris/docs/02_iOS/02_Advanced)
