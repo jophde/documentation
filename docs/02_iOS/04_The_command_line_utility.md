@@ -9,7 +9,7 @@ If you have installed the Colatris SDK manually, the colatris command line tool 
 #### Extract
 
 
-    colatris extract -p <project path> [-f YES]
+    colatris extract -p <Project path> [-f YES]
 
 Extract project strings into a `<locale>.base.colatris` file.
 
@@ -18,7 +18,7 @@ Extract project strings into a `<locale>.base.colatris` file.
 #### Push Content
 
 
-    colatris pushContent -p <project path> -k %%apik%% [-d <description>] [-pid %%pid%% -cv %%pbuild%%]
+    colatris pushContent -p <Project path> -k %%apik%% [-d <Description>] [-pid %%pid%% -cv %%pbuild%%]
 
 Create a new content version for the project on the Colatris backend with the strings contained in the project's `<locale>.base.colatris` file.
 
@@ -27,7 +27,7 @@ Create a new content version for the project on the Colatris backend with the st
 #### Pull Content
 
 
-    colatris pullContent -p <project path> -k %%apik%% [-l <locale>] [-pid %%pid%% -cv %%pbuild%%]
+    colatris pullContent -p <Project path> -k %%apik%% [-l <Locale>] [-pid %%pid%% -cv %%pbuild%%]
 
 Pull latest strings for the app’s content version into the project’s `<locale>.colatris` file. Pull base locale if no locale is specified.
 
