@@ -1,6 +1,6 @@
 ## Integrate the Colatris SDK into your iOS app
 
-The framework is designed to require minimal changes to your app's code, and yet cover nearly app of the app's text. Strings declared in code, using NSLocalizedString, as well as strings types into Interface Builder are both supported.
+The framework is designed to require minimal changes to your app's code, and yet cover nearly app of the app's text. Strings declared in code, using NSLocalizedString, as well as strings typed into Interface Builder are both supported.
 
 ### Using CocoaPods
 

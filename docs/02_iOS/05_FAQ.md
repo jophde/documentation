@@ -1,3 +1,11 @@
+### Which strings are picked up by the Colatris SDK in my app?
+
+The Colatris SDK will override iOS's localization mechanisms at runtime. It works for:
+
+* Strings declared in code, using `NSLocalizedString` or any of its variants.
+* Strings included in Interface Builder files (Storyboards, NIBs, XIBs)
+
+
 ### What operations are performed by the Colatris SDK when the app starts?
 
 
