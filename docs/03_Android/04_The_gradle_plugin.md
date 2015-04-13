@@ -30,7 +30,9 @@ In order to see what tasks Colatris has added to your project just run `gradle t
 A Gradle task will be created for each source set in your app.  A basic Android app will have the following tasks added by the Colatris plugin.
 
 `pushMainContentToColatris`
+
 `pushDebugContentToColatris`
+
 `pushReleaseContentToColatris`
 
 Most likely you just have all of your app's strings in `src/main/res`.  Running `pushMainContentToColatris` will only touch those strings and no strings in `src/debug/res` or `src/release/res`.  If you did run the debug or release task then all of the strings in that source set in addition to the main source set will be sent to Colatris.
@@ -39,12 +41,19 @@ Most likely you just have all of your app's strings in `src/main/res`.  Running 
 
 A Gradle task will be created for each source set in your app.  A basic Android app will have the following tasks added by the Colatris plugin.
 
+###### Production Tasks
 `pullDebugProductionContentFromColatris`
+
 `pullDebugWorkingContentFromColatris`
+
 `pullMainProductionContentFromColatris`
 
+
+###### Working Tasks
 `pullMainWorkingContentFromColatris`
+
 `pullReleaseProductionContentFromColatris`
+
 `pullReleaseWorkingContentFromColatris`
 
 Source sets behave just like the push content tasks.  Pulling tasks also differentiate between your published production strings and your working strings.  Published strings are for your released app and are pushed to end users if `colatris.prodServing` is on.  Working strings are just the current state of strings on the Colatris Dashboard under the translate tab.  Both sets of strings share the same keys.  Usually you will want to merge production strings.
@@ -56,6 +65,7 @@ These tasks will update your `res` xml files in place.  Removing the need to man
 You can easily send us a Colatris enabled build without releasing it to the Play Store.  A regular Android app will have the following commands available.  
 
 `sendDebugBuildToColatris`
+
 `sendReleaseBuildToColatris`
 
 These commands will build your app and upload it to Colatris.  Our translators will then be able to work in context.
