@@ -11,7 +11,7 @@ buildscript {
     }
     
     dependencies {
-        classpath 'com.colatris:colatris-plugin:0.9.3'
+        classpath 'com.colatris:colatris-plugin:0.9.5'
     }    
 }
 ```
@@ -24,7 +24,7 @@ repositories {
 }
 
 dependencies {
-    compile 'com.colatris:colatris-sdk:0.9.3' 
+    compile 'com.colatris:colatris-sdk:0.9.5' 
 }
 ```
 
@@ -38,8 +38,7 @@ apply plugin: 'com.colatris.plugin'
 ####  Configure Colatris entirely in build.gradle, no Java needed.
 
 * **projectId:** **(int)** the id tied to your project on the dashboard. *Required*
-* **contentVersion:** **(int)** your self-defined version of this build's copy (must be incrementing). *Required*
-* **description:** **(String)** description of the content version to make it more memorable. *Required*
+* **description:** **(String)** description of the app's version to make it more memorable. *Required*
 * **apiKey:** **(String)** this project's API key displayed on the Colatris dashboard in Home > Project info. *Required*
 * **editorMode:** **(boolean)** boolean to enable in-app editing by Colatris authed users. *Optional*
 	* **Options:** *true*, *false*
@@ -47,45 +46,24 @@ apply plugin: 'com.colatris.plugin'
 * **prodServing:** **(String)** option to specify frequency of copy update for end users. 
 	* **Options:** *"none", "once", "daily", "weekly"*
 	* **Default:** *"none"*
-
+* **autoPush:** **(boolean)** boolean to specify if Colatris pushes strings whenever you build releases. *Optional*
+    * **Options:** *true*, *false*
+    * **Default:** *true*
 
 ```
 colatris {
     projectId = %%pid%%
-    contentVersion = %%pbuild%%
-    description = "New content version"
+    description = "New app version"
     apiKey = "%%apik%%"
     editorMode = true
     prodServing = "daily"
+    autoPush = true
 }
 ```
 
 # DONE!
 
-####  Push up a new Content Version.  
-
-If it was already published the task will fail.  Simply increment `project.colatris.contentVersion` to publish a new one. You can also create a new Content version from the Dashboard or from within the Colatris in-app editor.
-
-```
-gradle pushMainContentToColatris
-```
-
-##### Send us a build of your app so that translation can happen in-context.  
-
-**Optional.** Each type of build can be sent separately.
-
-```
-gradle sendReleaseBuildToColatris
-```
-
-####  Now you can go ahead and order translations from the Dashboard! 
-
-
-Sign in. Navigate to your project. And click "Translate Now". Once your translations are finished they can be pulled back into your app's resources.  Only directories with locale suffixes will be merged.  Colatris handles updating your existing string xml files and creating a new one if needed per each locale.
-
-```
-gradle pullMainWorkingContentFromColatris
-```
+Whenver you make make release builds your apps strings will be sent to Colatris.
 
 #####  If you are using Proguard or Dexguard be **sure** to add the following to your configuration.
     

@@ -14,30 +14,23 @@ This mode causes an app to sync it's resources at runtime with the Colatris Serv
 
 When using a build with *editor mode* enabled simply press and hold with *three fingers* anywhere in your app to get the [Colatris app.](https://play.google.com/store/apps/details?id=com.colatris.app&hl=en)  Login to the Colatris app and select your project.  From the project control panel you can get the latest text, save your changes, and even change locale without changing the system locale.
 
-The Colatris app also allows your publish Content Versions of your text.  Simply hit the "Create New Build" button on your Project control panel in the Colatris app.  If an app with the corresponding Colatris Project ID is installed on the phone the strings for it's default locale will be sent to Colatris Web Dashboard.  Once a Content Version is published it can not be overwritten. To publish a new Content Version you must increment the `contentVersion` in `build.gradle`.  We recommend incrementing each Content Version by one but the only thing enforced is that the next version must be a larger integer.
-
 Anyone added to your Colatris project will be able to login to the Colatris app and start translating your app in-context, assuming it's built in editor mode.  Once logged in, simply press and hold any piece of text with one finger.  This will open a dialog where the raw text resource can be edited.  Once the edits are complete the text is saved in the Colatris SDK's storage and the started activities are recreated.  The new text will be display in place of the old text.  Press and hold with *two fingers* anywhere on the screen to translate all of the text on all views in the current `Activity`.
 
 ##### Plugin
 
-In addition to offloading some work to build time from the Coaltris SDK, the plugin will also add Gradle tasks to your project.  The tasks allow you to push a content version, pull text back into your project, and even send us a build of your app so our translators can work in context.  Tasks will be added for each of your app's build variants if `apiKey` is present in the `colatris`config.  
+In addition to offloading some work to build time from the Coaltris SDK, the plugin will also add Gradle tasks to your project.  The tasks allow you to push strings for an app version, pull text back into your project, and even send us a build of your app so our translators can work in context.  Tasks will be added for each of your app's build variants if `apiKey` is present in the `colatris`config.  
 
 Examples:
 ```
-// Push content version
+// Push strings
 gradle pushMainContentToColatris
 gradle pushReleaseContentToColatris
 gradle pushDebugContentToCoaltris
 
-// Pull working strings
-gradle pullMainWorkingContentFromColatris
-gradle pullReleaseWorkingContentFromColatris
-gradle pullDebugWorkingContentFromColatris
-
-// Pull production strings
-gradle pullMainProductionContentFromColatris
-gradle pullReleaseProductionContentFromColatris
-gradle pullDebugProductionContentFromColatris
+// Pull strings
+gradle pullMainContentFromColatris
+gradle pullReleaseContentFromColatris
+gradle pullDebugContentFromColatris
 
 // Send builds
 gradle sendDebugBuildToColatris
@@ -62,7 +55,7 @@ buildscript {
     // INCLUDE THE COLATRIS PLUGIN DEPENDENCY
     dependencies {
         classpath 'com.android.tools.build:gradle:1.0.0' // MINIMUM
-        classpath 'com.colatris:colatris-plugin:0.9.3' // HERE
+        classpath 'com.colatris:colatris-plugin:0.9.5' // HERE
     }
 }
 
@@ -73,7 +66,7 @@ repositories {
 
 // INCLUDE THE COLATRIS SDK DEPENDENCY
 dependencies {
-    compile 'com.colatris:colatris-sdk:0.9.3' // HERE
+    compile 'com.colatris:colatris-sdk:0.9.5' // HERE
 }
 
 // APPLY THE COLATRIS PLUGIN (note: Order matters. Put Colatris after the Android plugin.)
@@ -82,19 +75,19 @@ apply plugin: 'com.colatris.plugin' // HERE
 
 /* USE YOUR OWN SETTINGS BELOW
  * projectId = the id tied to your project on the dashboard (int)
- * contentVersion = your self-defined version of this build's copy (must be incrementing int)
- * description = description of the content version to make it more memorable
+ * description = description of your app's version to make it more memorable
  * apiKey = this project's API key displayed on the Colatris dashboard in Home > Project info
  * editorMode = boolean to enable in-app editing by Colatris authed users. Default: false
  * prodServing = option to specify frequency of copy update for end users. Options: "none", "once", "daily", "weekly" Default: "none"
+ * autoPush = boolean that specifies if strings are sent up when release builds are made. Default: true
  */
 colatris {
     projectId = %%pid%%
-    contentVersion = %%pbuild%%
-    description = "New content version" // HERE
+    description = "New app release" // HERE
     apiKey = "%%apik%%"
     editorMode = false // HERE
     prodServing = "none" // HERE
+    autoPush = true // HERE
 
     buildVariants {  // Only editorMode and prodServing can be overriden
         debug {

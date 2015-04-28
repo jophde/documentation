@@ -6,9 +6,10 @@ The framework is designed to require minimal changes to your app's code, and yet
 
 * Add `pod 'Colatris'` to your Podfile and run `pod install`.
 
-* In your project's Info.plist file, add the following keys/value pairs: 
-    * `ColatrisAppId` (Number): `%%pid%%`
-    * `ColatrisContentVersion` (Number): `%%pbuild%%`
+* Run `Pods/Colatris/colatris setup -p . -k %%apik%%`
+
+* In your project's Info.plist file, add the following keys/value pair: 
+    * `ColatrisAppId` (String): `%%pid%%`
 
 * In your AppDelegate, initialize Colatris: (see below for options)
 
@@ -17,19 +18,9 @@ The framework is designed to require minimal changes to your app's code, and yet
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions 
 {   
-    // your window creation code if you're not using a Storyboard
-    // ...
-    [Colatris startInWindow:self.window withAPIKey:@"%%apik%%" andOptions:<options>];
+    [Colatris startWithAPIKey:@"%%apik%%" andOptions:<options>];
     //  ...
 }
-```
-
-Admins and project owners can view the project's API key on the Colatris dashboard in _Home > Project info_.
-
-* After you build your app, the `<base locale>.base.colatris` file that was automatically created in your project should contain strings extracted from your project. You can now create a content version on Colatris with these strings. To do so, run the following command from your project root directory, using the project API key displayed on the Colatris dashboard in _Home > Project info_:
-
-```bash
-Pods/Colatris/colatris pushContent -p . -k %%apik%% [-d <description>]
 ```
 
 ### Manual installation
@@ -48,9 +39,12 @@ The `colatris` build tool is a Mac OS X executable that comes with the Colatris 
 
 * Add `Colatris.framework` to your project.
 
-* In your project's Info.plist file, add the following keys/value pairs: 
+* Copy the colatris binary into `/usr/local/bin/`, or wherever you like your executables to be, 
+
+* Run `/usr/local/bin/colatris setup -p <Project path> -k %%apik%%`
+
+* In your project's Info.plist file, add the following keys/value pair: 
     * `ColatrisAppId` (Number): `%%pid%%`
-    * `ColatrisContentVersion` (Number): `%%pbuild%%`
 
 * In your AppDelegate, initialize Colatris: (see below for options)
 
@@ -59,19 +53,15 @@ The `colatris` build tool is a Mac OS X executable that comes with the Colatris 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions 
 {   
-    // your window creation code if you're not using a Storyboard
-    // ...
-    [Colatris startInWindow:self.window withAPIKey:@"%%apik%%" andOptions:<options>];
+    [Colatris startWithAPIKey:@"%%apik%%" andOptions:<options>];
     //  ...
 }
 ```
-
-Admins and project owners can view the project's API key on the Colatris dashboard in _Home > Project info_.
-    
-* Copy the colatris binary into `/usr/local/bin/`, or wherever you like your executables to be, and add a run script build phase to your project, with the following contents:
+   
+* Add a run script build phase to your project, with the following contents:
 
 ```bash
-/usr/local/bin/colatris extract -p "${PROJECT_DIR}"
+/usr/local/bin/colatris sync -p "${PROJECT_DIR}"
 ```
 
 The build phase must be placed before "Compile Sources".
@@ -82,15 +72,10 @@ The build phase must be placed before "Compile Sources".
 
 * Create an empty file and name it `<base locale>.base.colatris`, add this file to the project and make sure it is included in the app's bundled resources.
 
-* After you build your app, your `<base locale>.base.colatris` should contain strings extracted from your project. You can now create a content version on Colatris with these strings. To do so, run the following command, using the project API key displayed on the Colatris dashboard in _Home > Project info_:
-
-```bash
-/usr/local/bin/colatris pushContent -p <project path> -k %%apik%% [-d <description>]
-```
 
 ## Options
 
-The options parameter of the `startInWindow: withAPIKey: andOptions:` method is an `NSDictionary`. Here are the possible keys:
+The options parameter of the `startWithAPIKey:andOptions:` method is an `NSDictionary`. Here are the possible keys:
 
 * `COOptionsDialogEnabled` (`NSNumber` `Boolean`, default: `NO`) Enables the Colatris actions panel, which lets users pull, edit and push strings from within the app.
 
@@ -104,7 +89,7 @@ The options parameter of the `startInWindow: withAPIKey: andOptions:` method is 
     * `COLoggingLevelVerbose`
 
 * `COOptionsServingFrequency` (`NSNumber` `COServingFrequency`, default: `COServingNone`)
-    * `COServingNone` Never downloads most recent strings. Strings packaged in the `<locale>.colatris` file will be used.
+    * `COServingNone` Never downloads most recent strings. Strings packaged in the `<locale>.colatris` files will be used.
     * `COServingOnce` Downloads most recent strings the first time the app is launched.
     * `COServingDaily` Downloads most recent strings once a day when the app is launched.
     * `COServingWeekly` Downloads most recent strings once a week when the app is launched.
