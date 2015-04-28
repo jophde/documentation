@@ -6,7 +6,7 @@ When the option `COEnableActions` is specified, users can open the Colatris acti
 The available actions are:
 
 * Log in to Colatris
-* Pull strings for the current locale
+* Get latest strings for the current locale
 * Choose between Working or Published strings
 
 ### Logging in
@@ -14,16 +14,16 @@ The available actions are:
 Logging in with a Colatris account will give users access to additional actions:
 
 * Change locale
-* Push translations
+* Save translations
 * Edit strings
 
 
 Once they log in, their credentials are saved in the keychain and loaded on subsequent app launches.
 
 
-### Pulling translations
+### Getting latest translations
 
-Pulling translations will download all strings in the current selected locale for the current project build. It will overwrite any previously edited strings on the device for the selected locale.
+Getting latest translations will download all strings in the current selected locale for the current project build. It will overwrite any previously edited strings on the device for the selected locale.
 
 
 ### Changing locale
@@ -42,14 +42,9 @@ If the new locale has never been selected before on the device, the user must pu
 
 * _Published_ only lets you pull published strings.
 
-### Pushing translations
+### Saving translations
 
-Pushing translations will upload the strings that have been edited on the device to the Colatris backend. 
-
-
-### Creating new content versions
-
-For each new build of the app that contains new texts, an admin must create a new content version to add these new strings to the Colatris backend. Once they have been added, these new strings can be translated into other languages.
+Saving translations will upload the strings that have been edited on the device to the Colatris backend. 
 
 
 ## Editing strings
