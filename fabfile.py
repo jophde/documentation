@@ -8,8 +8,6 @@ import os
 
 #constants
 ENVIRONMENT             = None
-AWS_ACCESS_KEY_ID       = 'AKIAIW34IF5YWW4NACOQ'
-AWS_ACCESS_KEY_SECRET   = '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' 
 S3_BUCKET_NAME          = None
 SOURCE_DIR              = 'docs/'
 DEST_DIR                = 'assets/docs/'
