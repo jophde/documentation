@@ -7,8 +7,7 @@ By default, an Android app has two [Build Variants](https://developer.android.co
 ```
 colatris {
     projectId = %%pid%%
-    contentVersion = %%pbuild%%
-    description = "New content version"
+    description = "New app version"
     apiKey = "<project API key>"
 
     buildVariants {
@@ -41,20 +40,15 @@ Most likely you just have all of your app's strings in `src/main/res`.  Running 
 
 A Gradle task will be created for each source set in your app.  A basic Android app will have the following tasks added by the Colatris plugin.
 
-###### Production Tasks
-`pullDebugProductionContentFromColatris`
+`pullMainContentFromColatris`
 
-`pullDebugWorkingContentFromColatris`
+`pullReleaseContentFromColatris`
 
-`pullMainProductionContentFromColatris`
+`pullReleaseContentFromColatris`
 
 
 ###### Working Tasks
-`pullMainWorkingContentFromColatris`
 
-`pullReleaseProductionContentFromColatris`
-
-`pullReleaseWorkingContentFromColatris`
 
 Source sets behave just like the push content tasks.  Pulling tasks also differentiate between your published production strings and your working strings.  Published strings are for your released app and are pushed to end users if `colatris.prodServing` is on.  Working strings are just the current state of strings on the Colatris Dashboard under the translate tab.  Both sets of strings share the same keys.  Usually you will want to merge production strings.
 

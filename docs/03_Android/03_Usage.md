@@ -13,11 +13,10 @@ The available actions are:
 * Select string environment
 * Get Latest Text
 * Save My Changes
-* Publish Content Version
 
 ### Edit project information
 
-This panel allows you to edit your project's name and logo.  It will also display messages such whether or not your app is installed on the phone or if the current content version is pushed.
+This panel allows you to edit your project's name and logo.  It will also display messages such whether or not your app is installed on the phone or if the current app version is pushed.
 
 ### Select locale
 
@@ -29,15 +28,15 @@ This dropdown allows you to switch between the working and productions strings. 
 
 ### Get Latest Text
 
-Gets the text for your app's Colatris Content Version and the currently selected locale.  You will only need to get the text the first time you want to see a locale.  Subsequently the text will be saved.  However, it is good practice to pull frequently so that you are in sync with the rest of the team.
+Gets the text for your app's version and the currently selected locale.  You will only need to get the text the first time you want to see a locale.  Subsequently the text will be saved.  However, it is good practice to pull frequently so that you are in sync with the rest of the team.
 
 ### Save My Changes
 
 This button allows you send your translations back to the Colatris dashboard.  Colatris provides tools for merging your local text with the upstream project text.
 
-### Publish Content Version
+### Publish App Version
 
-If you didn't publish your app's strings for the Content Version it was built for from the Gradle plugin you can do it from the Colatris app.  If the Content Version was already published this part of the Colatris Actions Panel will be disabled.  You can also provide a description to easily identify the Content Version on the Colatris Dashboard.
+If you didn't publish your app's strings for the version it was built for from the Gradle plugin you can do it from the Colatris app.  If the version was already published this part of the Colatris Actions Panel will be disabled.  You can also provide a description to easily identify the version on the Colatris Dashboard.
 
 ## Editing Strings
 
