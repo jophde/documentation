@@ -41,11 +41,11 @@ apply plugin: 'com.colatris.plugin'
 * **description:** **(String)** description of the app's version to make it more memorable. *Required*
 * **apiKey:** **(String)** this project's API key displayed on the Colatris dashboard in Home > Project info. *Required*
 * **editorMode:** **(boolean)** boolean to enable in-app editing by Colatris authed users. *Optional*
-	* **Options:** *true*, *false*
-	* **Default:** *false*
+    * **Options:** *true*, *false*
+    * **Default:** *false*
 * **prodServing:** **(String)** option to specify frequency of copy update for end users. 
-	* **Options:** *"none", "once", "daily", "weekly"*
-	* **Default:** *"none"*
+    * **Options:** *"none", "once", "daily", "weekly"*
+    * **Default:** *"none"*
 * **autoPush:** **(boolean)** boolean to specify if Colatris pushes strings whenever you build releases. *Optional*
     * **Options:** *true*, *false*
     * **Default:** *true*
@@ -63,7 +63,7 @@ colatris {
 
 # DONE!
 
-Whenver you make make release builds your apps strings will be sent to Colatris.
+Whenever you make release builds your apps strings will be sent to Colatris.
 
 #####  If you are using Proguard or Dexguard be **sure** to add the following to your configuration.
     
@@ -74,3 +74,4 @@ Whenver you make make release builds your apps strings will be sent to Colatris.
 
 
 Have a complicated build or custom views?  Check out the [Advanced docs](/#/colatris/docs/03_Android/02_Advanced).
+
