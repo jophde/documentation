@@ -37,22 +37,6 @@ apply plugin: 'com.colatris.plugin'
 
 ####  Configure Colatris entirely in build.gradle, no Java needed.
 
-<<<<<<< HEAD
-=======
-* **projectId:** **(int)** the id tied to your project on the dashboard. *Required*
-* **description:** **(String)** description of the app's version to make it more memorable. *Required*
-* **apiKey:** **(String)** this project's API key displayed on the Colatris dashboard in Home > Project info. *Required*
-* **editorMode:** **(boolean)** boolean to enable in-app editing by Colatris authed users. *Optional*
-    * **Options:** *true*, *false*
-    * **Default:** *false*
-* **prodServing:** **(String)** option to specify frequency of copy update for end users. 
-    * **Options:** *"none", "once", "daily", "weekly"*
-    * **Default:** *"none"*
-* **autoPush:** **(boolean)** boolean to specify if Colatris pushes strings whenever you build releases. *Optional*
-    * **Options:** *true*, *false*
-    * **Default:** *true*
-
->>>>>>> ab1729b66e9251787b49837692aa7a2858099707
 ```
 colatris {
     projectId = %%pid%%

@@ -2,10 +2,10 @@
 
 * Add `pod 'Colatris'` to your Podfile and run `pod install`.
 
-* Run `Pods/Colatris/colatris setup -p . -k %%apik%%`
-
 * In your project's Info.plist file, add the following keys/value pair: 
     * `ColatrisAppId` (String): `%%pid%%`
+    
+* Run `Pods/Colatris/colatris setup -p . -k %%apik%%`
 
 * In your AppDelegate, initialize Colatris:
 

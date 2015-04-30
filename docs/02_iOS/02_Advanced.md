@@ -6,10 +6,10 @@ The framework is designed to require minimal changes to your app's code, and yet
 
 * Add `pod 'Colatris'` to your Podfile and run `pod install`.
 
-* Run `Pods/Colatris/colatris setup -p . -k %%apik%%`
-
 * In your project's Info.plist file, add the following keys/value pair: 
     * `ColatrisAppId` (String): `%%pid%%`
+
+* Run `Pods/Colatris/colatris setup -p . -k %%apik%%`
 
 * In your AppDelegate, initialize Colatris: (see below for options)
 
@@ -41,10 +41,10 @@ The `colatris` build tool is a Mac OS X executable that comes with the Colatris 
 
 * Copy the colatris binary into `/usr/local/bin/`, or wherever you like your executables to be, 
 
-* Run `/usr/local/bin/colatris setup -p <Project path> -k %%apik%%`
-
 * In your project's Info.plist file, add the following keys/value pair: 
     * `ColatrisAppId` (Number): `%%pid%%`
+
+* Run `/usr/local/bin/colatris setup -p <Project path> -k %%apik%%`
 
 * In your AppDelegate, initialize Colatris: (see below for options)
 
