@@ -6,23 +6,30 @@ If you have installed the Colatris SDK manually, the colatris command line tool 
 
 ## Commands
 
+#### Setup
+
+	colatris setup -p <Project path> -k %%apik%%
+
+Sets up auto push for the project on this computer, and saves the API key locally so you don't need to specify it for subsequent commands.
+
+
 #### Extract
 
 
-    colatris extract -p <Project path> [-f YES]
+    colatris extract -p <Project path>
 
 Extract project strings into a `<locale>.base.colatris` file.
 
-* Use the _force_ (-f YES) option to clear all changes you've made to the `<locale>.base.colatris` file and reload all strings from your project.
 
 #### Push Content
 
 
-    colatris pushContent -p <Project path> -k %%apik%% [-d <Description>] [-pid %%pid%% -cv %%pbuild%%]
+    colatris pushContent -p <Project path> [-k %%apik%%] [-d <Description>] [-pid %%pid%% -cv %%pbuild%%]
 
 Create a new content version for the project on the Colatris backend with the strings contained in the project's `<locale>.base.colatris` file.
 
-* Use both the -pid and -cv options to specify your project ID and content version manually if those can't be found in the project's `Info.plist` file or if your project contains multiple `Info.plist` files.
+* If you have run `colatris setup` for this project on this computer in the past, you don't need to specify the API token with the `-k` parameter.
+* Use both the -pid and -cv options to specify your project ID and app version manually if those can't be found in the project's `Info.plist` file or if your project contains multiple `Info.plist` files.
 
 #### Pull Content
 
@@ -31,7 +38,8 @@ Create a new content version for the project on the Colatris backend with the st
 
 Pull latest strings for the app’s content version into the project’s `<locale>.colatris` file. Pull base locale if no locale is specified.
 
-* Use both the -pid and -cv options to specify your project ID and content version manually if those can't be found in the project's `Info.plist` file or if your project contains multiple `Info.plist` files.
+* If you have run `colatris setup` for this project on this computer in the past, you don't need to specify the API token with the `-k` parameter.
+* Use both the -pid and -cv options to specify your project ID and app version manually if those can't be found in the project's `Info.plist` file or if your project contains multiple `Info.plist` files.
 
 #### Version
 

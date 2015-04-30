@@ -11,7 +11,7 @@ buildscript {
     }
     
     dependencies {
-        classpath 'com.colatris:colatris-plugin:0.9.5'
+        classpath 'com.colatris:colatris-plugin:0.9.6'
     }    
 }
 ```
@@ -24,7 +24,7 @@ repositories {
 }
 
 dependencies {
-    compile 'com.colatris:colatris-sdk:0.9.5' 
+    compile 'com.colatris:colatris-sdk:0.9.6' 
 }
 ```
 
@@ -37,6 +37,22 @@ apply plugin: 'com.colatris.plugin'
 
 ####  Configure Colatris entirely in build.gradle, no Java needed.
 
+<<<<<<< HEAD
+=======
+* **projectId:** **(int)** the id tied to your project on the dashboard. *Required*
+* **description:** **(String)** description of the app's version to make it more memorable. *Required*
+* **apiKey:** **(String)** this project's API key displayed on the Colatris dashboard in Home > Project info. *Required*
+* **editorMode:** **(boolean)** boolean to enable in-app editing by Colatris authed users. *Optional*
+    * **Options:** *true*, *false*
+    * **Default:** *false*
+* **prodServing:** **(String)** option to specify frequency of copy update for end users. 
+    * **Options:** *"none", "once", "daily", "weekly"*
+    * **Default:** *"none"*
+* **autoPush:** **(boolean)** boolean to specify if Colatris pushes strings whenever you build releases. *Optional*
+    * **Options:** *true*, *false*
+    * **Default:** *true*
+
+>>>>>>> ab1729b66e9251787b49837692aa7a2858099707
 ```
 colatris {
     projectId = %%pid%%
@@ -50,7 +66,7 @@ colatris {
 
 #### Make release builds like you normally do.
 
-Whenver you make make release builds your apps strings will be sent to Colatris.
+Whenever you make release builds your apps strings will be sent to Colatris.
 
 #####  If you are using Proguard or Dexguard be **sure** to add the following to your configuration.
     
@@ -60,3 +76,4 @@ Whenver you make make release builds your apps strings will be sent to Colatris.
 ```
 
 Have a complicated build or custom views?  Check out the [Advanced docs](/#/colatris/docs/03_Android/02_Advanced).
+

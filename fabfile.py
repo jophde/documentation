@@ -8,6 +8,8 @@ import os
 
 #constants
 ENVIRONMENT             = None
+AWS_ACCESS_KEY_ID       = os.environ.get('AWS_ACCESS_KEY_ID')
+AWS_ACCESS_KEY_SECRET   = os.environ.get('AWS_ACCESS_KEY_SECRET')
 S3_BUCKET_NAME          = None
 SOURCE_DIR              = 'docs/'
 DEST_DIR                = 'assets/docs/'

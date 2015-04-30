@@ -55,7 +55,7 @@ buildscript {
     // INCLUDE THE COLATRIS PLUGIN DEPENDENCY
     dependencies {
         classpath 'com.android.tools.build:gradle:1.0.0' // MINIMUM
-        classpath 'com.colatris:colatris-plugin:0.9.5' // HERE
+        classpath 'com.colatris:colatris-plugin:0.9.6' // HERE
     }
 }
 
@@ -66,7 +66,7 @@ repositories {
 
 // INCLUDE THE COLATRIS SDK DEPENDENCY
 dependencies {
-    compile 'com.colatris:colatris-sdk:0.9.5' // HERE
+    compile 'com.colatris:colatris-sdk:0.9.6' // HERE
 }
 
 // APPLY THE COLATRIS PLUGIN (note: Order matters. Put Colatris after the Android plugin.)
