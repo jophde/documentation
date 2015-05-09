@@ -1,8 +1,8 @@
-# Colatris-enabled in no time.
+# Jargon-enabled in no time.
 
-**Pre-requisites:** text/resources must be externalized (ie. live in resource files and not hardcoded into UI elements) **and** you must be on the Gradle build system (the standard for Android Studio).  Colatris supports the Android Gradle Plugin 1.0.+.
+**Pre-requisites:** text/resources must be externalized (ie. live in resource files and not hardcoded into UI elements) **and** you must be on the Gradle build system (the standard for Android Studio).  Jargon supports the Android Gradle Plugin 1.0.+.
 
-#### Add the Colatris Maven Repository and a Colatris Plugin dependency to your buildscript configuration.
+#### Add the Jargon Maven Repository and a Jargon Plugin dependency to your buildscript configuration.
 
 ```
 buildscript {
@@ -16,7 +16,7 @@ buildscript {
 }
 ```
 
-#### Add the Colatris Maven Repository and a Colatris SDK dependency to your project configuration.
+#### Add the Jargon Maven Repository and a Jargon SDK dependency to your project configuration.
 
 ```
 repositories {
@@ -28,14 +28,14 @@ dependencies {
 }
 ```
 
-#### Apply the Colatris Plugin *after* the Android Gradle Plugin.
+#### Apply the Jargon Plugin *after* the Android Gradle Plugin.
 
 ```
 apply plugin: 'com.android.application'
 apply plugin: 'com.colatris.plugin'
 ```
 
-####  Configure Colatris entirely in build.gradle, no Java needed.
+####  Configure Jargon entirely in build.gradle, no Java needed.
 
 ```
 colatris {
@@ -50,7 +50,7 @@ colatris {
 
 #### Make release builds like you normally do.
 
-Whenever you make release builds your apps strings will be sent to Colatris.
+Whenever you make release builds your apps strings will be sent to Jargon.
 
 #####  If you are using Proguard or Dexguard be **sure** to add the following to your configuration.
     
@@ -59,5 +59,5 @@ Whenever you make release builds your apps strings will be sent to Colatris.
 -keepclassmembers public class com.colatris.* { *; }
 ```
 
-Have a complicated build or custom views?  Check out the [Advanced docs](/#/colatris/docs/03_Android/02_Advanced).
+Have a complicated build or custom views?  Check out the [Advanced docs](/#/jargon/docs/03_Android/02_Advanced).
 

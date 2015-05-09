@@ -1,6 +1,6 @@
 ## Uploading files
 
-You have the option to upload translation and string files via the _Translate_ page of the Colatris dashboard.
+You have the option to upload translation and string files via the _Translate_ page of the Jargon dashboard.
 
 This will let you:
 

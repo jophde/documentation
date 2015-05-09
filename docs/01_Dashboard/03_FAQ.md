@@ -14,10 +14,10 @@ This way, if your build only contains code changes and copy is untouched - it wo
 
 #### Q: Ok I can see my English strings how do I get translations?
 
-A: This is where Colatris really shines. All you need to do is go to the Home tab and click the Translate now button. 
+A: This is where Jargon really shines. All you need to do is go to the Home tab and click the Translate now button. 
 Depending on the type of translations you chose it will take anywhere from a few seconds to 48 hours until you see the translations.
 You can always track your requests in the Jobs tab. Read more in [Home](https://dashboard.colatris.com/#/colatris/docs/01_Dashboard/03_Home).
 
-#### Q: My app contains many placeholder strings that won't appear in the UI, but I can see them in the Colatris dashboard. How do I prevent these from being translated?
+#### Q: My app contains many placeholder strings that won't appear in the UI, but I can see them in the Jargon dashboard. How do I prevent these from being translated?
 
-A: If you're the owner or an admin in the project, go to the _Manage_ page of the Colatris dashboard. From there you can select multiple strings and then press _Mark selected as 'Do not translate'_. Translators will ignore these strings, and they won't be included in the published strings.
+A: If you're the owner or an admin in the project, go to the _Manage_ page of the Jargon dashboard. From there you can select multiple strings and then press _Mark selected as 'Do not translate'_. Translators will ignore these strings, and they won't be included in the published strings.

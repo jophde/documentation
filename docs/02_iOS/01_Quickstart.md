@@ -1,20 +1,20 @@
-# Colatris-enabled in no time.
+# Jargon-enabled in no time.
 
-* Add `pod 'Colatris'` to your Podfile and run `pod install`.
+* Add `pod 'Jargon'` to your Podfile and run `pod install`.
 
 * In your project's Info.plist file, add the following keys/value pair: 
-    * `ColatrisAppId` (String): `%%pid%%`
+    * `JargonAppId` (String): `%%pid%%`
     
-* Run `Pods/Colatris/colatris setup -p . -k %%apik%%`
+* Run `Pods/Jargon/jargon setup -p . -k %%apik%%`
 
-* In your AppDelegate, initialize Colatris:
+* In your AppDelegate, initialize Jargon:
 
 ```objc
-#import <Colatris/Colatris.h>
+#import <Jargon/Jargon.h>
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions 
 {   
-    [Colatris startWithAPIKey:@"%%apik%%" andOptions:@{COOptionsDialogEnabled: @YES, COOptionsLoggingLevel: @(COLoggingLevelDebug)}];
+    [Jargon startWithAPIKey:@"%%apik%%" andOptions:@{COOptionsDialogEnabled: @YES, COOptionsLoggingLevel: @(COLoggingLevelDebug)}];
     //  ...
 }
 ```
