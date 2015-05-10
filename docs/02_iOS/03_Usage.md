@@ -1,6 +1,6 @@
 ## The Jargon actions panel
 
-When the option `COEnableActions` is specified, users can open the Jargon actions panel using a special gesture, a 2-second long press with 3 fingers on a real device (2 fingers in the iOS simulator).
+When the option `JNEnableActions` is specified, users can open the Jargon actions panel using a special gesture, a 2-second long press with 3 fingers on a real device (2 fingers in the iOS simulator).
 
 
 The available actions are:

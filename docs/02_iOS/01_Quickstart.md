@@ -14,7 +14,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions 
 {   
-    [Jargon startWithAPIKey:@"%%apik%%" andOptions:@{COOptionsDialogEnabled: @YES, COOptionsLoggingLevel: @(COLoggingLevelDebug)}];
+    [Jargon startWithAPIKey:@"%%apik%%" andOptions:@{JNOptionsDialogEnabled: @YES, JNOptionsLoggingLevel: @(JNLoggingLevelDebug)}];
     //  ...
 }
 ```

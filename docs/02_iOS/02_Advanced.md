@@ -28,7 +28,7 @@ The framework is designed to require minimal changes to your app's code, and yet
 You will need:
 
 1. Jargon.framework
-2. The Jargon binary
+2. The jargon binary
 
 
 Download a .zip of both [here](https://github.com/colatris/jargon-ios-sdk/archive/master.zip).
@@ -77,34 +77,34 @@ The build phase must be placed before "Compile Sources".
 
 The options parameter of the `startWithAPIKey:andOptions:` method is an `NSDictionary`. Here are the possible keys:
 
-* `COOptionsDialogEnabled` (`NSNumber` `Boolean`, default: `NO`) Enables the Jargon actions panel, which lets users pull, edit and push strings from within the app.
+* `JNOptionsDialogEnabled` (`NSNumber` `Boolean`, default: `NO`) Enables the Jargon actions panel, which lets users pull, edit and push strings from within the app.
 
-* `COOptionsLoggingLevel` (`NSNumber` `COLoggingLevel`, default: `COLoggingLevelNone`) sets the level of console debug messages from the Jargon SDK.
+* `JNOptionsLoggingLevel` (`NSNumber` `JNLoggingLevel`, default: `JNLoggingLevelNone`) sets the level of console debug messages from the Jargon SDK.
 
-    * `COLoggingLevelNone`
-    * `COLoggingLevelError`
-    * `COLoggingLevelWarn`
-    * `COLoggingLevelInfo`
-    * `COLoggingLevelDebug`
-    * `COLoggingLevelVerbose`
+    * `JNLoggingLevelNone`
+    * `JNLoggingLevelError`
+    * `JNLoggingLevelWarn`
+    * `JNLoggingLevelInfo`
+    * `JNLoggingLevelDebug`
+    * `JNLoggingLevelVerbose`
 
-* `COOptionsServingFrequency` (`NSNumber` `COServingFrequency`, default: `COServingNone`)
-    * `COServingNone` Never downloads most recent strings. Strings packaged in the `<locale>.jargon` files will be used.
-    * `COServingOnce` Downloads most recent strings the first time the app is launched.
-    * `COServingDaily` Downloads most recent strings once a day when the app is launched.
-    * `COServingWeekly` Downloads most recent strings once a week when the app is launched.
+* `JNOptionsServingFrequency` (`NSNumber` `JNServingFrequency`, default: `JNServingNone`)
+    * `JNServingNone` Never downloads most recent strings. Strings packaged in the `<locale>.jargon` files will be used.
+    * `JNServingOnce` Downloads most recent strings the first time the app is launched.
+    * `JNServingDaily` Downloads most recent strings once a day when the app is launched.
+    * `JNServingWeekly` Downloads most recent strings once a week when the app is launched.
 
 
 During your development and QA process, you can use the following options:
 
 ```objc
-@{COOptionsDialogEnabled: @YES, COOptionsLoggingLevel: @(COLoggingLevelDebug)}
+@{JNOptionsDialogEnabled: @YES, JNOptionsLoggingLevel: @(JNLoggingLevelDebug)}
 ```
 
 For your App Store builds, you can then use the following options:
 
 ```objc
-@{COOptionsServingFrequency: @(COServingDaily)}
+@{JNOptionsServingFrequency: @(JNServingDaily)}
 ```
 
 
