@@ -6,7 +6,7 @@ This page will onboard a translator into working with a Jargon-enabled app
 
 In order to start translating/QA-ing a customer's mobile app, a new translator needs to complete the following steps:
 
-* Go to the Jargon [sign-up page](https://dashboard-preview.colatris.com/user/sign-in).
+* Go to the Jargon [sign-up page](https://dashboard.usejargon.com/user/sign-in).
 * Fill out the fields in the _Register_ column on the right. (If one of the languages you speak is not in the list, you can add it later)
 * Make note of the e-mail address you used during registration.
 * Press _Register_.
@@ -126,7 +126,7 @@ This will download the latest build file in the chosen language and format.
 
 While using the Jargon dashboard please keep in mind that some features are WIP. We ship updates every week and would love to hear your suggestions and bug reports.
 
-Feel free to e-mail [bugs@colatris.com](mailto:bugs@colatris.com) to report a bug or make feature requests.
+Feel free to e-mail [bugs@usejargon.com](mailto:bugs@usejargon.com) to report a bug or make feature requests.
 
 
 

@@ -1,7 +1,7 @@
 If you have installed the Jargon SDK using CocoaPods, the command line utility is located in the `Pods/Jargon` directory of your project. You can run commands from that folder or copy the utility to a folder contained in your `PATH`.
 
 
-If you have installed the Jargon SDK manually, the jargon command line tool is included in [the package](https://github.com/colatris/colatris-ios-sdk/archive/master.zip) you've downloaded.
+If you have installed the Jargon SDK manually, the jargon command line tool is included in [the package](https://github.com/colatris/jargon-ios-sdk/archive/master.zip) you've downloaded.
 
 
 ## Commands

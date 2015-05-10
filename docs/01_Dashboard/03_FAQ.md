@@ -2,7 +2,7 @@
 
 A: Once you create a Project you need upload your app's English strings to start the translation process. To achieve that you need to add a new content version (what the heck is a content version? see answer below).
 You can do this in one of two ways:
- * Through the command line (see  the [Command Line Utility](https://dashboard.colatris.com/#/colatris/docs/02_iOS/03_The_command_line_utility) page)
+ * Through the command line (see  the [Command Line Utility](https://dashboard.usejargon.com/#/jargon/docs/02_iOS/03_The_command_line_utility) page)
  * Through the dashboard by clicking the '+ Content version' button in the navigation bar of the Translate tab.
 You will need to choose a file containing your English strings (.strings || .xml || || .json)
 
@@ -16,7 +16,7 @@ This way, if your build only contains code changes and copy is untouched - it wo
 
 A: This is where Jargon really shines. All you need to do is go to the Home tab and click the Translate now button. 
 Depending on the type of translations you chose it will take anywhere from a few seconds to 48 hours until you see the translations.
-You can always track your requests in the Jobs tab. Read more in [Home](https://dashboard.colatris.com/#/colatris/docs/01_Dashboard/03_Home).
+You can always track your requests in the Jobs tab. Read more in [Home](https://dashboard.usejargon.com/#/jargon/docs/01_Dashboard/03_Home).
 
 #### Q: My app contains many placeholder strings that won't appear in the UI, but I can see them in the Jargon dashboard. How do I prevent these from being translated?
 

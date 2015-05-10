@@ -31,7 +31,7 @@ You will need:
 2. The Jargon binary
 
 
-Download a .zip of both [here](https://github.com/colatris/colatris-ios-sdk/archive/master.zip).
+Download a .zip of both [here](https://github.com/colatris/jargon-ios-sdk/archive/master.zip).
 
 
 The `jargon` build tool is a Mac OS X executable that comes with the Jargon SDK. The purpose of this tool is to automatically extract strings from the app’s Xcode project, normalize their format, and export them into a .jargon localization file. This file is bundled with the app’s Xcode project and will be bundled with the target iOS app. We recommend to run this tool in a build phase of the Xcode project, but it can also be run manually.

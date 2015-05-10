@@ -19,4 +19,4 @@
 }
 ```
 
-Not using CocoaPods? Check out the [manual integration steps](/#/colatris/docs/02_iOS/02_Advanced)
+Not using CocoaPods? Check out the [manual integration steps](/#/jargon/docs/02_iOS/02_Advanced)
