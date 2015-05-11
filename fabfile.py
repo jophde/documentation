@@ -22,7 +22,7 @@ def prod():
     global URL
     ENVIRONMENT     = 'prod'
     S3_BUCKET_NAME  = 'co-static-preview'
-    URL             = 'https://pstatic01.colatris.com/'
+    URL             = 'https://pstatic01.usejargon.com/'
 
 @task
 def stage():
