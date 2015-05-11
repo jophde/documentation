@@ -44,6 +44,8 @@ The `jargon` build tool is a Mac OS X executable that comes with the Jargon SDK.
 * In your project's Info.plist file, add the following keys/value pair: 
     * `JargonAppId` (Number): `%%pid%%`
 
+* Create an empty file and name it `<base locale>.base.jargon`, add this file to the project and make sure it is included in the app's bundled resources.
+
 * Run `/usr/local/bin/jargon setup -p <Project path> -k %%apik%%`
 
 * In your AppDelegate, initialize Jargon: (see below for options)
@@ -68,9 +70,6 @@ The build phase must be placed before "Compile Sources".
 
 
 * In your target's Build Settings, in "Other Linker Flags", add `-all_load` if it's not already present.
-
-
-* Create an empty file and name it `<base locale>.base.jargon`, add this file to the project and make sure it is included in the app's bundled resources.
 
 
 ## Options
