@@ -1,10 +1,10 @@
-## The Colatris App
+## The Jargon App
 
-If `colatris.manualMode` in your app's `build.gradle` is set to `true` all users will be able to press and hold with 3 fingers anywhere in your app.  If the Colatris app is not installed they will be sent to its Google Play Store listing to download it.  Once installed they can log into their Colatris account.  If you added them to your app's Colatris project they will be able edit text inside of your running application.  
+If `jargon.manualMode` in your app's `build.gradle` is set to `true` all users will be able to press and hold with 3 fingers anywhere in your app.  If the Jargon app is not installed they will be sent to its Google Play Store listing to download it.  Once installed they can log into their Jargon account.  If you added them to your app's Jargon project they will be able edit text inside of your running application.  
 
-## The Colatris Actions Panel
+## The Jargon Actions Panel
 
-If the Colatris app is installed then 3 finger pressing anywhere in your app will open the Colatris App to your app's Colatris action panel.  
+If the Jargon app is installed then 3 finger pressing anywhere in your app will open the Jargon App to your app's Jargon action panel.  
 
 The available actions are:
 
@@ -24,7 +24,7 @@ This dropdown allows you to change the locale of your app *without* changing the
 
 ### Select string environment
 
-This dropdown allows you to switch between the working and productions strings.  Working strings are the strings on the translate tab of the Colatris dashboard. Production strings are strings you have published. 
+This dropdown allows you to switch between the working and productions strings.  Working strings are the strings on the translate tab of the Jargon dashboard. Production strings are strings you have published. 
 
 ### Get Latest Text
 
@@ -32,12 +32,12 @@ Gets the text for your app's version and the currently selected locale.  You wil
 
 ### Save My Changes
 
-This button allows you send your translations back to the Colatris dashboard.  Colatris provides tools for merging your local text with the upstream project text.
+This button allows you send your translations back to the Jargon dashboard.  Jargon provides tools for merging your local text with the upstream project text.
 
 ### Publish App Version
 
-If you didn't publish your app's strings for the version it was built for from the Gradle plugin you can do it from the Colatris app.  If the version was already published this part of the Colatris Actions Panel will be disabled.  You can also provide a description to easily identify the version on the Colatris Dashboard.
+If you didn't publish your app's strings for the version it was built for from the Gradle plugin you can do it from the Jargon app.  If the version was already published this part of the Jargon Actions Panel will be disabled.  You can also provide a description to easily identify the version on the Jargon Dashboard.
 
 ## Editing Strings
 
-If you are logged into the Colatris app and added to an app's Colatris project you can edit text in the running application in context.  Simply get the latest text for a locale by pressing the button the Colatris Actions panel.  This has to be done at least once before text will be editable.  Afterwards simply press and hold any piece of text app to edit it.  You can also press and hold with two fingers to edit all of the text on the screen at once. 
+If you are logged into the Jargon app and added to an app's Jargon project you can edit text in the running application in context.  Simply get the latest text for a locale by pressing the button the Jargon Actions panel.  This has to be done at least once before text will be editable.  Afterwards simply press and hold any piece of text app to edit it.  You can also press and hold with two fingers to edit all of the text on the screen at once. 
