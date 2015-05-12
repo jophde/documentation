@@ -40,4 +40,4 @@ If you didn't publish your app's strings for the version it was built for from t
 
 ## Editing Strings
 
-If you are logged into the Jargon app and added to an app's Jargon project you can edit text in the running application in context.  Simply get the latest text for a locale by pressing the button the Jargon Actions panel.  This has to be done at least once before text will be editable.  Afterwards simply press and hold any piece of text app to edit it.  You can also press and hold with two fingers to edit all of the text on the screen at once. 
+If you are logged into the Jargon app and added to an app's Jargon project you can edit text in the running application in context.  Simply get the latest text for a locale by pressing the "Get Latest Text" button in the Jargon Actions panel.  This has to be done at least once before text will be editable.  Afterwards, simply press and hold any piece of text app to edit it.  You can also press and hold with two fingers to edit all of the text on the screen at once. 

@@ -1,10 +1,10 @@
 ## Introduction
 
-Jargon is designed to work with the Android Resource System. It uses the same string resource IDs that were already used in an app's string files. It can handle nearly all of an app's text including the ActionBar, Tabs,ListViews, and drop downs.  It works just fine with Android Layout XML and the Layout Editor.  In Production Serving mode, Jargon allows the resources in your app to be changed live for end users from our Web Dashboard.  Or if you build your app in editor mode users that you add to your Jargon project will be able to change and translate text in-context and sync their changes.  The Jargon Plugin offloads some work to compile and allows strings to be synced via Gradle tasks.
+Jargon is designed to work with the Android Resource System. It uses the same string resource IDs that were already used in an app's string files. It can handle nearly all of an app's text including the ActionBar, Tabs, ListViews, and drop downs.  It works just fine with Android Layout XML and the Layout Editor.  In Production Serving mode, Jargon allows the resources in your app to be changed live for end users from our Web Dashboard.  Or, if you build your app in editor mode, users that you add to your Jargon project will be able to change and translate text in-context and sync their changes.  The Jargon Plugin offloads some work to compile and allows strings to be synced via Gradle tasks.
 
 ##### Jargon Editor Mode
 
-This mode is designed so that it interferes with the regular app experience in almost no way, even for translators.* If an authorized translator is using the app, text will become editable and syncable with the Jargon servers.  Jargon will provide a top notch experience for translators, while maintaining the current state of the app for regular users.  The SDK will do nothing for users that do not have the Jargon app on their phone and even less if they aren't logged into it.
+This mode is designed so that it interferes with the regular app experience in almost no way, even for translators. If an authorized translator is using the app, text will become editable and syncable with the Jargon servers.  Jargon will provide a top notch experience for translators, while maintaining the current state of the app for regular users. 
 
 ##### Jargon Production Serving Mode
 
@@ -18,14 +18,14 @@ Anyone added to your Jargon project will be able to login to the Jargon app and 
 
 ##### Plugin
 
-In addition to offloading some work to build time from the Coaltris SDK, the plugin will also add Gradle tasks to your project.  The tasks allow you to push strings for an app version, pull text back into your project, and even send us a build of your app so our translators can work in context.  Tasks will be added for each of your app's build variants if `apiKey` is present in the `jargon`config.  
+In addition to offloading some work to build time from the Jargon SDK, the plugin will also add Gradle tasks to your project.  The tasks allow you to push strings for an app version, pull text back into your project, and even send us a build of your app so our translators can work in context.  Tasks will be added for each of your app's build variants if `apiKey` is present in the `jargon`config.  
 
 Examples:
 ```
 // Push strings
 gradle pushMainContentToJargon
 gradle pushReleaseContentToJargon
-gradle pushDebugContentToCoaltris
+gradle pushDebugContentToJargon
 
 // Pull strings
 gradle pullMainContentFromJargon
@@ -52,7 +52,7 @@ buildscript {
         maven { url 'http://repos.usejargon.com/releases' } // HERE
     }
 
-    // INCLUDE THE COLATRIS PLUGIN DEPENDENCY
+    // INCLUDE THE JARGON PLUGIN DEPENDENCY
     dependencies {
         classpath 'com.android.tools.build:gradle:1.0.0' // MINIMUM
         classpath 'com.usejargon:jargon-plugin:1.0.0' // HERE
@@ -64,12 +64,12 @@ repositories {
     maven { url 'http://repos.usejargon.com/releases' } // HERE
 }
 
-// INCLUDE THE COLATRIS SDK DEPENDENCY
+// INCLUDE THE JARGON SDK DEPENDENCY
 dependencies {
     compile 'com.usejargon:jargon-sdk:1.0.0' // HERE
 }
 
-// APPLY THE COLATRIS PLUGIN (note: Order matters. Put Jargon after the Android plugin.)
+// APPLY THE JARGON PLUGIN (note: Order matters. Put Jargon after the Android plugin.)
 apply plugin: 'com.android.application'
 apply plugin: 'com.usejargon.plugin' // HERE
 
