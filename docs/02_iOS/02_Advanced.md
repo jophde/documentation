@@ -42,7 +42,7 @@ The `jargon` build tool is a Mac OS X executable that comes with the Jargon SDK.
 * Copy the jargon binary into `/usr/local/bin/`, or wherever you like your executables to be, 
 
 * In your project's Info.plist file, add the following keys/value pair: 
-    * `JargonAppId` (Number): `%%pid%%`
+    * `JargonAppId` (String): `%%pid%%`
 
 * Create an empty file and name it `<base locale>.base.jargon`, add this file to the project and make sure it is included in the app's bundled resources.
 
