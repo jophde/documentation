@@ -54,8 +54,8 @@ buildscript {
 
     // INCLUDE THE JARGON PLUGIN DEPENDENCY
     dependencies {
-        classpath 'com.android.tools.build:gradle:1.0.0' // MINIMUM
-        classpath 'com.usejargon:jargon-plugin:1.0.0' // HERE
+        classpath 'com.android.tools.build:gradle:1.0.1' // MINIMUM
+        classpath 'com.usejargon:jargon-plugin:1.0.1' // HERE
     }
 }
 
@@ -66,7 +66,7 @@ repositories {
 
 // INCLUDE THE JARGON SDK DEPENDENCY
 dependencies {
-    compile 'com.usejargon:jargon-sdk:1.0.0' // HERE
+    compile 'com.usejargon:jargon-sdk:1.0.1' // HERE
 }
 
 // APPLY THE JARGON PLUGIN (note: Order matters. Put Jargon after the Android plugin.)
