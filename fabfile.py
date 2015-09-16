@@ -8,8 +8,8 @@ import os
 
 #constants
 ENVIRONMENT             = None
-AWS_ACCESS_KEY_ID       = 'AKIAIW34IF5YWW4NACOQ'
-AWS_ACCESS_KEY_SECRET   = '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' 
+AWS_ACCESS_KEY_ID       = os.environ.get('AWS_ACCESS_KEY_ID')
+AWS_ACCESS_KEY_SECRET   = os.environ.get('AWS_ACCESS_KEY_SECRET')
 S3_BUCKET_NAME          = None
 SOURCE_DIR              = 'docs/'
 DEST_DIR                = 'assets/docs/'
@@ -22,7 +22,7 @@ def prod():
     global URL
     ENVIRONMENT     = 'prod'
     S3_BUCKET_NAME  = 'co-static-preview'
-    URL             = 'https://pstatic01.colatris.com/'
+    URL             = 'https://pstatic01.usejargon.com/'
 
 @task
 def stage():

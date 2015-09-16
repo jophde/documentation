@@ -1,31 +1,25 @@
-# Colatris-enabled in no time.
+# Jargon-enabled in no time.
 
-**Pre-requisite:** Strings in your code must be internationalized using the standard NSLocalizedString methods in order to be picked up by the Colatris SDK. Strings from Interface Builder files (Storyboards, NIBs, XIBs) will be picked up automatically.
+* Add `pod 'Jargon'` to your Podfile and run `pod install`.
 
-* Add `pod 'Colatris'` to your Podfile and run `pod install`.
+* In your project's Info.plist file, add the following keys/value pair: 
+    * `JargonAppId` (String): `%%pid%%`
+    
+* Run `Pods/Jargon/jargon setup -p . -k %%apik%%`
 
-* In your project's Info.plist file, add the following keys/value pairs: 
-    * `ColatrisAppId` (Number): `%%pid%%`
-    * `ColatrisContentVersion` (Number): `%%pbuild%%`
-
-* In your AppDelegate, initialize Colatris: (see below for options)
+* In your AppDelegate, initialize Jargon:
 
 ```objc
-#import <Colatris/Colatris.h>
+#import <Jargon/Jargon.h>
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions 
 {   
-    // your window creation code if you're not using a Storyboard
-    // ...
-    [Colatris startInWindow:self.window withAPIKey:@"%%apik%%" andOptions:@{COOptionsDialogEnabled: @YES, COOptionsLoggingLevel: @(COLoggingLevelDebug)}];
+    [Jargon startWithAPIKey:@"%%apik%%" andOptions:@{JNOptionsDialogEnabled: @YES, JNOptionsLoggingLevel: @(JNLoggingLevelDebug)}];
     //  ...
 }
 ```
 
-* After you build your app, the `<base locale>.base.colatris` file that was automatically created in your project should contain strings extracted from your project. You can now create a content version on Colatris with these strings. To do so, run the following command from your project root directory:
+Not using CocoaPods? Check out the [manual integration steps](/#/jargon/docs/02_iOS/02_Advanced)
 
-```bash
-Pods/Colatris/colatris pushContent -p . -k %%apik%% [-d <description>]
-```
 
-Not using CocoaPods? Check out the [manual integration steps](/#/colatris/docs/02_iOS/02_Advanced)
+[How to use Jargon in your app](/#/jargon/docs/02_iOS/03_Usage)

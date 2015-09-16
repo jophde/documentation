@@ -1,25 +1,25 @@
 ## Translator onboarding
 
-This page will onboard a translator into working with a Colatris-enabled app
+This page will onboard a translator into working with a Jargon-enabled app
 
 ### Registration
 
 In order to start translating/QA-ing a customer's mobile app, a new translator needs to complete the following steps:
 
-* Go to the Colatris [sign-up page](https://dashboard-preview.colatris.com/user/sign-in).
+* Go to the Jargon [sign-up page](https://dashboard.usejargon.com/user/sign-in).
 * Fill out the fields in the _Register_ column on the right. (If one of the languages you speak is not in the list, you can add it later)
 * Make note of the e-mail address you used during registration.
 * Press _Register_.
 * Check your e-mail and click on the confirmation link.
 * Log-in with your new credentials.
 
-You will land on the _Home_ page, which might be initially empty. Now that you have a Colatris account you need to provide the e-mail you used during registration to your translation manager/admin so they can add you to the relevant projects.
+You will land on the _Home_ page, which might be initially empty. Now that you have a Jargon account you need to provide the e-mail you used during registration to your translation manager/admin so they can add you to the relevant projects.
 
 ### Using the Dashboard
 
 Once you've been added to some projects, click on one of them in the _Projects_ dropdown.
 
-Here on the dashboard you will most likely submit/upload the first batch of translations completed on your native translation environment/software. All the translations that are uploaded to Colatris are accessible via the _Translate page_.
+Here on the dashboard you will most likely submit/upload the first batch of translations completed on your native translation environment/software. All the translations that are uploaded to Jargon are accessible via the _Translate page_.
 
 ### Translate page
 
@@ -57,13 +57,13 @@ Now that an initial set of translations has been uploaded you can check and revi
 
 ### Using the mobile SDK
 
-Ask your translation manager/admin to give you a build of the customer's application (with the Colatris SDK integrated). You might need to provide an e-mail address.
+Ask your translation manager/admin to give you a build of the customer's application (with the Jargon SDK integrated). You might need to provide an e-mail address.
 
 Once you have the app installed on your phone, you have all components needed to start reviewing. 
 
-#### Accessing the Colatris dialogue
+#### Accessing the Jargon dialogue
 
-Launch the customer application. On any page of the app, press and hold 3 fingers on the screen for 3 seconds, or until the Colatris dialogue pops up.
+Launch the customer application. On any page of the app, press and hold 3 fingers on the screen for 3 seconds, or until the Jargon dialogue pops up.
 
 Via this dialogue you can control which language you want to see the customer's application in, pull down select versions of copy, and even submit translations/edits. 
 
@@ -78,7 +78,7 @@ Once you do that, you should see your personal information in the dialogue and s
 
 In order to see the translations you (or others) uploaded to the dashboard, follow these steps:
 
-* On the Colatris dialogue find the _Translation_ group of buttons.
+* On the Jargon dialogue find the _Translation_ group of buttons.
 * Press the _Locale_ field and select which language you want to review.
 * Make sure the _Strings environment_ is set to _Working_.
 * Press the _Get Latest Text_ button
@@ -90,18 +90,18 @@ You should now see the application in the requested language. To switch language
 
 As you go through the app, you have the option to submit and correct translations. 
 
-* Press on a string element in the app until the Colatris Edit Dialogue pops up.
+* Press on a string element in the app until the Jargon Edit Dialogue pops up.
 * In the provided input field, enter the new translation.
 * Repeat for n strings.
 
-Note that you may have to swipe between strings in the Edit Dialogue to find the particular text you are looking to make changes to. Also, if you experience problems with in-app editing, then please feel free to make edits in the dashboard, save said changes, and then pull down the latest copy via the Colatris dialogue (aforementioned process) to review in-app. 
+Note that you may have to swipe between strings in the Edit Dialogue to find the particular text you are looking to make changes to. Also, if you experience problems with in-app editing, then please feel free to make edits in the dashboard, save said changes, and then pull down the latest copy via the Jargon dialogue (aforementioned process) to review in-app. 
 
 #### Saving your work/edits
 
-When you are done with corrections and want to save your work, press and hold 3 fingers on the screen until the Colatris main dialogue pops up.
+When you are done with corrections and want to save your work, press and hold 3 fingers on the screen until the Jargon main dialogue pops up.
 
 * Make sure the locale is set correctly.
-* Pressing _Save My Changes_ will save all the strings you edited on your phone since the last _Pull_ to the Colatris servers. 
+* Pressing _Save My Changes_ will save all the strings you edited on your phone since the last _Pull_ to the Jargon servers. 
 
 Attention: This is a destructive action and will overwrite existing translations on the Dashboard.
 
@@ -113,7 +113,7 @@ For example, if you just changed the English string _Sign up_ in French, type in
 
 Once you are done with your edits and want to port changes into the translation medium of your choice, you can download your work in a commonly accepted format. 
 
-* Log into the Colatris dashboard.
+* Log into the Jargon dashboard.
 * Click on the _Manage_ page in the top navigation bar.
 * Choose a language.
 * Press _Download all_ in the right pane.
@@ -124,9 +124,9 @@ This will download the latest build file in the chosen language and format.
 
 ### Bugs and suggestions
 
-While using the Colatris dashboard please keep in mind that some features are WIP. We ship updates every week and would love to hear your suggestions and bug reports.
+While using the Jargon dashboard please keep in mind that some features are WIP. We ship updates every week and would love to hear your suggestions and bug reports.
 
-Feel free to e-mail [bugs@colatris.com](mailto:bugs@colatris.com) to report a bug or make feature requests.
+Feel free to e-mail [bugs@usejargon.com](mailto:bugs@usejargon.com) to report a bug or make feature requests.
 
 
 
