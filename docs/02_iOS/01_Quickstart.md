@@ -7,6 +7,8 @@
     
 * Run `Pods/Jargon/jargon setup -p . -k %%apik%%`
 
+* Check that a <locale>.base.jargon was created in your project, typically in the Supporting Files group. If it's not the case please follow the [manual integration steps](/#/jargon/docs/02_iOS/02_Advanced).
+
 * In your AppDelegate, initialize Jargon:
 
 ```objc

@@ -11,6 +11,8 @@ The framework is designed to require minimal changes to your app's code, and yet
 
 * Run `Pods/Jargon/jargon setup -p . -k %%apik%%`
 
+* Check that a <locale>.base.jargon was created in your project, typically in the Supporting Files group. If it's not the case please follow the manual integration steps below.
+
 * In your AppDelegate, initialize Jargon: (see below for options)
 
 ```objc
