@@ -11,7 +11,7 @@ buildscript {
     }
     
     dependencies {
-        classpath 'com.usejargon:jargon-plugin:1.0.1'
+        classpath 'com.usejargon:jargon-plugin:1.0.2'
     }    
 }
 ```
@@ -24,7 +24,7 @@ repositories {
 }
 
 dependencies {
-    compile 'com.usejargon:jargon-sdk:1.0.1' 
+    compile 'com.usejargon:jargon-sdk:1.0.2' 
 }
 ```
 
