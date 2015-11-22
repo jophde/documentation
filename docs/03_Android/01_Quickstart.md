@@ -57,6 +57,12 @@ Whenever you make release builds your apps strings will be sent to Jargon.
 ```
 -keep public class com.usejargon.**
 -keepclassmembers public class com.usejargon.* { *; }
+-keep class io.realm.annotations.RealmModule
+-keep @io.realm.annotations.RealmModule class *
+-keep class io.realm.internal.Keep
+-keep @io.realm.internal.Keep class *
+-dontwarn javax.**
+-dontwarn io.realm.**
 ```
 
 Have a complicated build or custom views?  Check out the [Advanced docs](/#/jargon/docs/03_Android/02_Advanced).
