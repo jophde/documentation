@@ -137,9 +137,15 @@ public class SampleCustomView extends TextView implements jargonCustomView {
 
 #### Proguard
 
-If you are using Proguard, or Dexguard, the following lines need to be in your configuration.
+If you are using Proguard, or Dexguard, the following lines need to be in your configuration.  On newer versions of the Android Gradle plugin this will happen automatically.
 
 ```
 -keep public class com.usejargon.**
 -keepclassmembers public class com.usejargon.* { *; }
+-keep class io.realm.annotations.RealmModule
+-keep @io.realm.annotations.RealmModule class *
+-keep class io.realm.internal.Keep
+-keep @io.realm.internal.Keep class *
+-dontwarn javax.**
+-dontwarn io.realm.**
 ```
