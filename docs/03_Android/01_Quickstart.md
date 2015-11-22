@@ -11,7 +11,7 @@ buildscript {
     }
     
     dependencies {
-        classpath 'com.usejargon:jargon-plugin:1.0.2'
+        classpath 'com.usejargon:jargon-plugin:1.1.0'
     }    
 }
 ```
@@ -20,11 +20,12 @@ buildscript {
 
 ```
 repositories {
+    jcenter() // Must specify jcenter as repo to get Jargon's dependencies
     maven { url 'http://repos.usejargon.com/releases' }
 }
 
 dependencies {
-    compile 'com.usejargon:jargon-sdk:1.0.2' 
+    compile 'com.usejargon:jargon-sdk:1.1.0' 
 }
 ```
 
